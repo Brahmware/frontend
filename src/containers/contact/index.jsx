@@ -11,7 +11,7 @@ const ContactContainer = () => {
             <div className="contact-section">
                 <div className="contactus row">
                     <div className="col-md-6">
-                        <div className="map">
+                        <div className="map noselect">
                             <div
                                 className="title"
                                 data-aos='fade-right'
@@ -36,7 +36,7 @@ const ContactContainer = () => {
                                 data-aos-duration='1200'
                             >
                                 <div className="section-heading">
-                                    <div className="title">
+                                    <div className="title noselect">
                                         Contact <span>Us</span>
                                     </div>
                                 </div>
@@ -47,13 +47,13 @@ const ContactContainer = () => {
                                 data-aos-duration='1200'
                                 data-aos-delay='300'
                             >
-                                <div className="description">
+                                <div className="description noselect">
                                     <span>
                                         Thank you for your interest.
                                         Please fill out the form below to inquire about our work in Digital.
                                     </span>
                                 </div>
-                                <div className="note">
+                                <div className="note noselect">
                                     <span>
                                         Required fields are marked with an asterisk (*).
                                     </span>

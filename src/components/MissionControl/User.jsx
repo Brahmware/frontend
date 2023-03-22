@@ -31,12 +31,11 @@ const User = ({ params }) => {
                 flexDirection={'column'}
                 justifyContent={'center'}
                 alignItems={'flex-start'}
-                gap={'0.25em'}
             >
                 {/* Full Name */}
                 <Typography
                     component={'h3'}
-                    fontSize={'2em'}
+                    fontSize={'1.75em'}
                     fontWeight={'medium'}
                     gap={'1em'}
                 >
@@ -47,26 +46,26 @@ const User = ({ params }) => {
                 <Box
                     width={'100%'}
                     display={'flex'}
-                    gap={'1em'}
+                    gap={'0.8em'}
                     alignItems={'center'}
                 >
                     {
                         username === currentUser ?
                             <YouIcon
-                                height={'2em'}
-                                width={'2em'}
+                                height={'1.33em'}
+                                width={'1.5em'}
                                 fill={colors.success}
                             />
                             :
                             <BrahmNautIcon
-                                height={'2em'}
-                                width={'2em'}
+                                height={'1.5em'}
+                                width={'1.5em'}
                                 fill={colors.primary}
                             />
                     }
                     <Typography
                         component={'h5'}
-                        variant='h5'
+                        fontSize={'1.25em'}
                         color={username === currentUser ? colors.success : 'primary'}
                         fontWeight={username === currentUser && 'medium'}
                     >
@@ -78,10 +77,10 @@ const User = ({ params }) => {
                 {/* Email */}
                 <Box
                     display={'flex'}
-                    gap={'1.1em'}
+                    gap={'0.9em'}
                     alignItems={'center'}
                 >
-                    <ContactsIcon sx={{ height: '1.125em', width: '1.125em' }} />
+                    <ContactsIcon sx={{ height: '0.82em', width: '0.82em' }} />
                     <Typography padding={'0.5em 0'}>{email}</Typography>
                 </Box>
             </Box>
@@ -99,16 +98,16 @@ const User = ({ params }) => {
                     {(() => {
                         switch (true) {
                             case currentUserRoles.includes(rolesList.Admin):
-                                return (<AdminSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+                                return (<AdminSmiley className='commands-smiley' height={'4em'} width={'4em'} />);
 
                             case currentUserRoles.includes(rolesList.Handler):
-                                return (<HandlerSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+                                return (<HandlerSmiley className='commands-smiley' height={'4em'} width={'4em'} />);
 
                             case currentUserRoles.includes(rolesList.Blogger):
-                                return (<BloggerSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+                                return (<BloggerSmiley className='commands-smiley' height={'4em'} width={'4em'} />);
 
                             default:
-                                return (<BloggerSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+                                return (<BloggerSmiley className='commands-smiley' height={'4em'} width={'4em'} />);
                         }
                     })()}
                 </Box>

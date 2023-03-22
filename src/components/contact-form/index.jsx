@@ -1,11 +1,55 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { registerContact } from "../../api";
 import disableScroll from 'disable-scroll';
 import Modal from "../modal";
+import ThemedField from "../TextFilelds/ThemedField";
+import { Box } from "@mui/system";
+import CollapsableError from "../TextFilelds/CollapsableError";
+import { EMAIL_PATTERN } from "../../utils/patterns";
+import EmailOTP from "./EmailOTP";
+import { LoadingButtonSmall } from "../LoadingButtonWithIcon";
+import { colors } from "../../muiTheme/theme";
+import { Typography } from "@mui/material";
+import { SendQueryIcon } from "../../assets/icons";
+import { contactSchema } from "../../features/contact/contactSlice";
 
+
+const helperTextObject = {
+    firstName: {
+        required: "First Name is Required",
+    },
+
+    lastName: {
+        required: "Last Name is Required",
+    },
+
+    username: {
+        required: "Username is Required",
+        pattern: "Min 4 and max 30 charecters, no spaces. ( _  -  .  @ are allowed )"
+    },
+
+    email: {
+        required: "Email is Required.",
+        pattern: "Invalid Email Address."
+    },
+
+    email_otp: {
+        required: "Email OTP is Required.",
+        pattern: "Wrong OTP"
+    },
+
+    subject: {
+        required: "Subject is required",
+    },
+
+    message: {
+        required: "Message is required",
+    },
+
+};
 
 const ContactForm = () => {
 
@@ -14,8 +58,15 @@ const ContactForm = () => {
     let [modalContent, setModalContent] = useState(null);
     let [isError, setIsError] = useState(false);
 
-    const { reset, register, handleSubmit, errors } = useForm({
-        mode: "onBlur",
+    const {
+        reset,
+        control,
+        register,
+        handleSubmit,
+        errors
+    } = useForm({
+        mode: "onChange",
+        defaultValues: contactSchema
     });
 
     const onSubmitHandler = async (data) => {
@@ -47,7 +98,7 @@ const ContactForm = () => {
 
             })
 
-    }
+    };
 
     useEffect(() => {
         showModal ? disableScroll.on() : disableScroll.off();
@@ -55,132 +106,317 @@ const ContactForm = () => {
 
     const onChange = (value) => {
         setDisableButton(false);
-    }
+    };
 
     const onCloseModal = () => {
         setShowModal(false);
-    }
+    };
+
+    const [isOtpCorrect, setIsOtpCorrect] = useState(false);
 
     return (
-        <React.Fragment>
+        <form className="contact__us-form">
             {
-                showModal && <Modal isError={isError} data={modalContent} onCloseModal={onCloseModal} />
+                /* 
+                Form Fields
+                * Name: { firstName, middleName, LastName } 
+                * Email
+                * Phone Number
+                * Organization
+                * Subject
+                * Message
+                */
             }
-            <form
-                id="contact-form"
-                onSubmit={handleSubmit(onSubmitHandler)}
+
+            {/* Name: {firstName} */}
+            <Controller
+                control={control}
+                name="name"
+                rules={{
+                    required: true,
+                }}
+                render={({ field, fieldState: { error } }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_first-name'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                ref={null}
+                                name={'fullName.firstName'}
+                                id='firstName'
+                                label="First Name*"
+                                size={'small'}
+                                fullWidth
+                                error={error !== undefined}
+                                disabled={isOtpCorrect}
+                            />
+                            <CollapsableError growCondition={error !== undefined}>
+                                {
+                                    error
+                                        ? error?.type === 'userError'
+                                            ? error?.errorMessage
+                                            : helperTextObject.firstName[error?.type]
+                                        : ''
+                                }
+                            </CollapsableError>
+                        </Box>
+                    )
+                }}
+            />
+
+            {/* Name: {middleName} */}
+            <Controller
+                control={control}
+                name="fullName.middleName"
+                render={({ field }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_middle-name'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                ref={null}
+                                name={'fullName.middleName'}
+                                id='middleName'
+                                label="Middle Name"
+                                size={'small'}
+                                disabled={isOtpCorrect}
+                                fullWidth
+                            />
+                        </Box>
+                    )
+                }}
+            />
+
+            {/* Name: {lastName} */}
+            <Controller
+                control={control}
+                name="fullName.lastName"
+                rules={{
+                    required: true,
+                }}
+                render={({ field, fieldState: { error } }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_last-name'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                ref={null}
+                                name={'lastName'}
+                                id='lastName'
+                                label="Last Name*"
+                                size={'small'}
+                                fullWidth
+                                disabled={isOtpCorrect}
+                                error={error !== undefined}
+                            />
+                            <CollapsableError growCondition={error !== undefined}>
+                                {
+                                    error
+                                        ? error?.type === 'userError'
+                                            ? error?.errorMessage
+                                            : helperTextObject.lastName[error?.type]
+                                        : ''
+                                }
+                            </CollapsableError>
+                        </Box>
+
+                    )
+                }}
+            />
+
+            {/* Email */}
+            <Controller
+                control={control}
+                name="email"
+                defaultValue={''}
+                rules={{
+                    required: true,
+                    pattern: EMAIL_PATTERN
+                }}
+                render={({ field, fieldState: { error } }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_email'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                ref={null}
+                                name={'email'}
+                                label="Email*"
+                                size={'small'}
+                                placeholder="Org. email is prefered."
+                                fullWidth
+                                disabled={isOtpCorrect}
+                                error={error !== undefined}
+                            />
+
+                            <CollapsableError growCondition={error !== undefined}>
+                                {
+                                    error
+                                        ? error?.type === 'userError'
+                                            ? error?.errorMessage
+                                            : helperTextObject.email[error?.type]
+                                        : ''
+                                }
+                            </CollapsableError>
+                        </Box>
+                    )
+                }}
+            />
+
+            {/* emailOTP */}
+
+            <EmailOTP
+                isOtpCorrect={isOtpCorrect}
+                setIsOtpCorrect={setIsOtpCorrect}
+                formControl={control}
+                handleFormSubmit={handleSubmit}
+            />
+
+            {/* Organization */}
+            <Controller
+                control={control}
+                name="organization"
+                render={({ field }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_organization'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                disabled={!isOtpCorrect}
+                                ref={null}
+                                name={'organisation'}
+                                id='organization'
+                                label="Organization"
+                                placeholder="Your organization."
+                                size={'small'}
+                                fullWidth
+                            />
+                        </Box>
+                    )
+                }}
+            />
+
+            {/* Subject */}
+            <Controller
+                control={control}
+                name="subject"
+                rules={{
+                    required: true,
+                }}
+                render={({ field, fieldState: { error } }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_subject'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                disabled={!isOtpCorrect}
+                                ref={null}
+                                name={'subject'}
+                                id='subject'
+                                label="Subject*"
+                                size={'small'}
+                                fullWidth
+                                placeholder="What is this query about?"
+                                error={error !== undefined}
+                            />
+                            <CollapsableError growCondition={error !== undefined}>
+                                {
+                                    error
+                                        ? error?.type === 'userError'
+                                            ? error?.errorMessage
+                                            : helperTextObject.subject[error?.type]
+                                        : ''
+                                }
+                            </CollapsableError>
+                        </Box>
+                    )
+                }}
+            />
+
+            {/* Message */}
+            <Controller
+                control={control}
+                name="message"
+                rules={{
+                    required: true,
+                }}
+                render={({ field, fieldState: { error } }) => {
+                    return (
+                        <Box
+                            width={'100%'}
+                            className='contact__us-form_message'
+                        >
+                            <ThemedField
+                                {...field}
+                                variant={'filled'}
+                                disabled={!isOtpCorrect}
+                                ref={null}
+                                name={'message'}
+                                id='message'
+                                label="Message*"
+                                size={'small'}
+                                fullWidth
+                                multiline
+                                minRows={5}
+                                maxRows={10}
+                                placeholder="Write your query in details."
+                                error={error !== undefined}
+                            />
+                            <CollapsableError growCondition={error !== undefined}>
+                                {
+                                    error
+                                        ? error?.type === 'userError'
+                                            ? error?.errorMessage
+                                            : helperTextObject.message[error?.type]
+                                        : ''
+                                }
+                            </CollapsableError>
+                        </Box>
+                    )
+                }}
+            />
+
+            <LoadingButtonSmall
+                className="contact__us-form_submit-button"
+                variant='contained'
+                disabled={!isOtpCorrect}
+                color='primary'
+                loading={false}
+                loadingPosition='end'
+                /* type='submit' */
+                endIcon={<SendQueryIcon />}
+                fullWidth
+                size='large'
             >
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="single-form">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Enter your name *"
-                                ref={register({ required: "Name is required" })}
-                            />
-                            {errors.name && <p>{errors.name.message}</p>}
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="single-form">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Enter your email *"
-                                ref={register({
-                                    required: "Email is required",
-                                    pattern: {
-                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                        message: "invalid email address",
-                                    },
-                                })}
-                            />
-                            {errors.email && <p>{errors.email.message}</p>}
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="single-form">
-                            <input
-                                type="phone"
-                                name="phone"
-                                placeholder="Enter your phone"
-                                ref={register({
-                                    pattern: {
-                                        value: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/i,
-                                        message: "invalid number",
-                                    },
-                                })}
-                            />
-                            {errors.phone && <p>{errors.phone.message}</p>}
-                        </div>
-                    </div>
-                    <div className="col-md-12">
-                        <div className="single-form">
-                            <input
-                                type="text"
-                                name="organization"
-                                placeholder="Organization"
-                                ref={register({})}
-                            />
-                        </div>
-                    </div>
-                    <div className="col-md-12">
-                        <div className="single-form">
-                            <input
-                                type="text"
-                                name="subject"
-                                placeholder="Subject *"
-                                ref={register({
-                                    required: "Subject is required",
-                                })}
-                            />
-                            {errors.subject && <p>{errors.subject.message}</p>}
-                        </div>
-                    </div>
-                    <div className="col-md-12">
-                        <div className="single-form">
-                            <textarea
-                                name="message"
-                                placeholder="Message *"
-                                ref={register({
-                                    required: "Message is required",
-                                })}
-                            ></textarea>
-                            {errors.message && <p>{errors.message.message}</p>}
-                        </div>
-                    </div>
-                    <div className="action-part">
-                        <p className="form-message noselect">
-                            Brahmware is committed to protecting your information.
-                            Your information will be used in accordance with the GDRP.
-                            As Brahmware is a global organisation, your information may be
-                            stored and processed by Brahmware and its affiliates in countries
-                            outside your country of residence, but wherever your information
-                            is processed, we will handle it with the same care and respect
-                            for your privacy.
-                        </p>
-                        <div className="col-md-12 mt-2 captcha-submit-wrapper">
-                            <div className="row p-0 captcha-submit">
-                                <div className="col-md-8">
-                                    <ReCAPTCHA
-                                        theme="dark"
-                                        sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY}
-                                        onChange={onChange}
-                                    />
-                                </div>
-                                <div className="col-md-4 d-flex justify-content-end align-items-center">
-                                    <div className="form-btn p-0">
-                                        <button type="submit" disabled={disableButton}>Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </React.Fragment>
-    );
+                <Typography
+                    fontSize={'1em'}
+                    fontWeight={'bold'}
+                    color={colors.darker__card}
+                    lineHeight={'1em'}
+                >
+                    Send Query
+                </Typography>
+            </LoadingButtonSmall>
+        </form>
+    )
 };
 
 export default ContactForm;

@@ -1,5 +1,5 @@
-import { MuiOtpInput } from 'mui-one-time-password-input'
-import React from 'react'
+import React from 'react';
+import { MuiOtpInput } from 'mui-one-time-password-input';
 
 const OtpInputField = ({ ...field }) => {
 

@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
-import { colors } from "../../muiTheme/theme";
+import { colors, scales, transition } from "../../muiTheme/theme";
 import { Switch } from "@mui/material";
 
 export const SwitchComponent = styled(Switch)(({ onColor, offColor }) => ({
     "& .MuiSwitch-thumb": {
-        backgroundColor: offColor
+        backgroundColor: offColor,
+        transition: transition('fast'),
     },
 
 
@@ -19,6 +20,10 @@ export const SwitchComponent = styled(Switch)(({ onColor, offColor }) => ({
     },
 
     "&:hover": {
+        '& .MuiSwitch-thumb': {
+            transform: `scale(${scales.medium})`
+        },
+
         "& .MuiTouchRipple-root": {
             backgroundColor: offColor,
             opacity: 0.15,
@@ -35,6 +40,7 @@ export const SwitchComponent = styled(Switch)(({ onColor, offColor }) => ({
     "& .Mui-disabled": {
         "& .MuiSwitch-thumb": {
             backgroundColor: colors.text__color__dark,
+            transform: 'none'
         },
     }
 }));

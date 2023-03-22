@@ -29,7 +29,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
         getUser: builder.mutation({
             query: (username) => ({
                 url: `/users/${username}`,
-                method: 'GET'
+                method: 'GET',
             }),
             async onQueryStarted(args, { dispatch, queryFulfilled }) {
                 try {
@@ -42,11 +42,13 @@ export const userApiSlice = apiSlice.injectEndpoints({
         }),
 
         addNewUser: builder.mutation({
-            query: (userdata) => ({
-                url: `/users`,
-                method: 'POST',
-                body: { ...userdata }
-            }),
+            query: (userdata) => {
+                return ({
+                    url: `/users`,
+                    method: 'POST',
+                    body: userdata
+                })
+            },
             async onQueryStarted(args, { dispatch, queryFulfilled }) {
                 try {
                     const { data } = await queryFulfilled;

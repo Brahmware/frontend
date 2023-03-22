@@ -6,7 +6,6 @@ import { EmojiEmotions as DefaultIcon } from '@mui/icons-material';
 const LoadingIconButton = (props) => {
 
     const {
-        className,
         isLoading,
         color,
         loadingColor,
@@ -14,6 +13,7 @@ const LoadingIconButton = (props) => {
         icon,
         size,
         children,
+        sx,
         ...other
     } = props;
 
@@ -26,17 +26,20 @@ const LoadingIconButton = (props) => {
                         aria-label={`${props.ariaLabel}-disabled`}
                         color='muted'
                         disabled
+                        sx={sx}
                     >
                         <CircularProgress
                             size={size}
                             color={loadingColor ? loadingColor : 'muted'}
                         />
-                    </IconButton> :
+                    </IconButton>
+                    :
                     <IconButton
                         {...other}
                         aria-label={props.ariaLabel}
                         color={color}
                         onClick={onClick}
+                        sx={sx}
                     >
                         {children}
                     </IconButton>

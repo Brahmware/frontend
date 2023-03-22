@@ -1,18 +1,32 @@
 import { styled } from '@mui/system';
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import {
     Drawer as MuiDrawer,
     Box,
     Typography,
 } from '@mui/material';
-import { colors, drawerWidth } from '../../../muiTheme/theme';
-import { MissionControlLogoFull, SeedOfLifeIcon } from '../../../assets/icons';
+import {
+    colors,
+    drawerWidth
+} from '../../../muiTheme/theme';
+import {
+    MissionControlLogoFull,
+    SeedOfLifeIcon
+} from '../../../assets/icons';
 import { Divider } from '../../DividerComponent/DividerComponent';
-import { drawerItems, editContents } from '../../../features/managableContents/drawerItems';
+import {
+    drawerItems,
+    editContents
+} from '../../../features/managableContents/drawerItems';
 import { SwitchComponent } from '../../SwitchComponent/SwitchComponent';
-import { DrawerItemButton, DrawerItemHeader, DrawerItemMenu } from './DrawerItem';
+import {
+    DrawerItemButton,
+    DrawerItemHeader,
+    DrawerItemMenu
+} from './DrawerItem';
 import ItemAccountSection from './ItemAccountSection';
 import WithToolTip from '../../TooltipComponent/WithTooltip';
+import { useHistory } from 'react-router-dom';
 
 
 const openedMixin = (theme) => ({
@@ -58,15 +72,16 @@ export const DrawerHeader = styled('div')(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
 }));
 
-const DrawerItem = ({ open, item }) => (
+const DrawerItem = ({ index, open, item, selected }) => (
     <DrawerItemMenu
+        index={index}
         drawerOpen={open}
         icon={item.icon}
         linkTo={item.path}
+        selected={selected}
     >
         {item.name}
     </DrawerItemMenu>
@@ -76,6 +91,9 @@ const DrawerItem = ({ open, item }) => (
 const MissionControlDrawer = () => {
 
     const [open, setOpen] = useState(false);
+    const location = useHistory().location;
+
+    const selection = useCallback((navItem) => String(location.pathname).includes(navItem));
 
     return (
         <Drawer
@@ -105,30 +123,38 @@ const MissionControlDrawer = () => {
             >
                 {
                     drawerItems.map((item, index) => {
-                        return (
-                            <React.Fragment key={index}>
-                                {
-                                    !open ?
-                                        <WithToolTip
-                                            color={colors.primary}
-                                            message={
-                                                <Typography
-                                                    color={colors.dark__card}
-                                                    fontWeight={'medium'}
-                                                    fontSize={'1em'}
-                                                >
-                                                    {item.name}
-                                                </Typography>
-                                            }
-                                            tooltipPlacement="right"
-                                        >
-                                            <DrawerItem open={open} item={item} />
-                                        </WithToolTip>
-                                        :
-                                        <DrawerItem open={open} item={item} />
+                        if (!open) return (
+                            <WithToolTip
+                                index={index}
+                                color={colors.primary}
+                                tooltipPlacement="right"
+                                message={
+                                    <Typography
+                                        color={colors.dark__card}
+                                        fontWeight={'medium'}
+                                        fontSize={'1em'}
+                                    >
+                                        {item.name}
+                                    </Typography>
                                 }
-                            </React.Fragment>
+                            >
+                                <DrawerItem
+                                    open={open}
+                                    item={item}
+                                    selected={(selection)(item.path)}
+                                />
+                            </WithToolTip>
                         )
+                        else {
+                            return (
+                                <DrawerItem
+                                    open={open}
+                                    item={item}
+                                    selected={(selection)(item.path)}
+                                />
+                            )
+                        }
+
                     })
                 }
             </Box>
@@ -142,30 +168,37 @@ const MissionControlDrawer = () => {
             >
                 {
                     editContents.map((item, index) => {
-                        return (
-                            <React.Fragment key={index}>
-                                {
-                                    !open ?
-                                        <WithToolTip
-                                            color={colors.primary}
-                                            message={
-                                                <Typography
-                                                    color={colors.dark__card}
-                                                    fontWeight={'medium'}
-                                                    fontSize={'1em'}
-                                                >
-                                                    {item.name}
-                                                </Typography>
-                                            }
-                                            tooltipPlacement="right"
-                                        >
-                                            <DrawerItem open={open} item={item} />
-                                        </WithToolTip>
-                                        :
-                                        <DrawerItem open={open} item={item} />
+                        if (!open) return (
+                            <WithToolTip
+                                index={index}
+                                color={colors.primary}
+                                tooltipPlacement="right"
+                                message={
+                                    <Typography
+                                        color={colors.dark__card}
+                                        fontWeight={'medium'}
+                                        fontSize={'1em'}
+                                    >
+                                        {item.name}
+                                    </Typography>
                                 }
-                            </React.Fragment>
+                            >
+                                <DrawerItem
+                                    open={open}
+                                    item={item}
+                                    selected={(selection)(item.path)}
+                                />
+                            </WithToolTip>
                         )
+                        else {
+                            return (
+                                <DrawerItem
+                                    open={open}
+                                    item={item}
+                                    selected={(selection)(item.path)}
+                                />
+                            )
+                        }
                     })
                 }
             </Box>
@@ -186,6 +219,7 @@ const MissionControlDrawer = () => {
                             message={open ? "Close Drawer" : "Open Drawer"}
                             showChangeState={true}
                             tooltipPlacement={'right'}
+                            tooltipMargin={'0 2.6em !important'}
                         >
                             <SwitchComponent
                                 size='small'
@@ -198,8 +232,13 @@ const MissionControlDrawer = () => {
                     </Box>
                 }
             />
-            <ItemAccountSection drawerOpen={open} setDrawerOpen={setOpen} />
-        </Drawer>
+            <Box>
+                <ItemAccountSection
+                    drawerOpen={open}
+                    setDrawerOpen={setOpen}
+                />
+            </Box>
+        </Drawer >
     )
 }
 

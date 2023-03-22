@@ -14,6 +14,7 @@ import "./assets/scss/style.scss";
 import RequireAuth from "./features/auth/RequireAuth";
 import PersistLogin from "./features/auth/PersistLogin";
 import { rolesList } from "./utils/rolesList";
+import MoodCollector from "./features/moodCollector/MoodCollector";
 
 const HomePage = lazy(() => import("./pages/index"));
 const AboutPage = lazy(() => import("./pages/about"));
@@ -90,10 +91,13 @@ const App = () => {
                     path={'/'}
                     allowedRoles={[
                         rolesList.Handler,
-                        rolesList.Admin
+                        rolesList.Admin,
+                        rolesList.Blogger
                     ]}
                 >
-                    <MissionControl />
+                    <MoodCollector>
+                        <MissionControl />
+                    </MoodCollector>
                 </RequireAuth>
             </PersistLogin>
             <Route

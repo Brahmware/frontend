@@ -6,15 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectAllUsers } from '../../features/users/usersSlice';
 import useMapUserColumns from '../../hooks/useMapUserColumns';
 import { colors } from '../../muiTheme/theme';
-import { GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 
-const UsersToolbar = () => (
-    <GridToolbarContainer color='red'>
-        <Tooltip title={'Export'}>
-            <GridToolbarExport />
-        </Tooltip>
-    </GridToolbarContainer>
-)
 
 const AllUserTable = () => {
 
@@ -71,9 +63,6 @@ const AllUserTable = () => {
 
 
                 }}
-            /* components={{
-                Toolbar: UsersToolbar
-            }} */
             />
         </Card>
     )

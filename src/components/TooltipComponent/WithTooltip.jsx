@@ -1,27 +1,56 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import { TooltipComponent } from "./TooltipComponent";
 
+const WithToolTip = ({
+    className,
+    index,
+    color,
+    textColor,
+    message,
+    children,
+    showChangeState,
+    tooltipPlacement,
+    tooltipMargin,
+    tooltipVanish,
+    tooltipTimeout,
+    ...others
+}) => {
 
-const WithToolTip = ({ color, message, children, showChangeState, tooltipPlacement }) => {
+    const [show, setShow] = React.useState(false);
 
-    const [show, setShow] = React.useState(false)
+    const onMouseEnterBehaviour = () => {
+        setShow(true);
+        if (tooltipVanish) {
+            setTimeout(() => setShow(false), tooltipTimeout || 2000);
+        }
+    }
 
     return (
-        <React.Fragment>
+        <React.Fragment key={index}>
             {
                 message ?
                     <TooltipComponent
+                        className={className}
                         title={message}
                         color={color}
+                        textColor={textColor}
                         open={show}
                         disableHoverListener
-                        onMouseEnter={() => setShow(true)}
+                        onMouseEnter={onMouseEnterBehaviour}
                         onMouseLeave={() => setShow(false)}
                         placement={tooltipPlacement ? tooltipPlacement : 'bottom'}
+                        tooltipMargin={tooltipMargin}
+                        arrow={true}
                     >
-                        <span onClick={() => !showChangeState && setShow(false)}>
+                        <Typography
+                            {...others}
+                            className={className}
+                            component='span'
+                            onClick={() => !showChangeState && setShow(false)}
+                        >
                             {children}
-                        </span>
+                        </Typography>
                     </TooltipComponent>
                     :
                     children

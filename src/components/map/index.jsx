@@ -1,5 +1,5 @@
 import React from 'react';
-import { select, geoOrthographic, geoPath, timer } from 'd3';
+import { select, geoOrthographic, geoPath, timer, drag } from 'd3';
 import { useD3 } from '../../hooks/use-d3';
 import world from '../../data/world.json';
 
@@ -39,6 +39,11 @@ const MapComponent = (props) => {
 
                     });
                 }
+
+                function enableDrag() {
+
+                }
+
                 props.locations.map((location, key) => {
                     return select(".world-map").select(`#${location.iso}`).attr("class", "countries we-are-here");
                 });

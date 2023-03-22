@@ -3,13 +3,19 @@ import { Tooltip as MuiTooltip, Zoom, colors, tooltipClasses } from "@mui/materi
 import { speed } from "../../muiTheme/theme";
 
 export const TooltipComponent = styled(({ className, ...props }) => (
-    <MuiTooltip {...props} TransitionComponent={Zoom} classes={{ popper: className }} enterDelay={speed.fast} />
-))(({ theme, color }) => ({
+    <MuiTooltip
+        {...props}
+        TransitionComponent={Zoom}
+        classes={{ popper: className }}
+        enterDelay={speed.fast}
+    />
+))(({ theme, color, textColor, tooltipMargin }) => ({
     [`& .${tooltipClasses.tooltip}`]: {
         backgroundColor: color,
-        color: colors.text__color,
+        color: textColor || colors.text__color,
         fontSize: theme.typography.pxToRem(12),
         borderRadius: '2em',
-        zIndex: 10
+        zIndex: 10,
+        margin: tooltipMargin && tooltipMargin
     },
 }));

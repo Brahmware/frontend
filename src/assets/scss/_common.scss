@@ -94,6 +94,25 @@ body::-webkit-scrollbar-thumb {
     /* creates padding around scroll thumb */
 }
 
+form {
+    & textarea::-webkit-scrollbar {
+        width: $scrollbar-width;
+        /* width of the entire scrollbar */
+    }
+
+    & textarea::-webkit-scrollbar-track {
+        background: $dull-black;
+        /* color of the tracking area */
+    }
+
+    & textarea::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        /* color of the scroll thumb */
+        /* roundness of the scroll thumb */
+        border: 0.5px solid $primary;
+        /* creates padding around scroll thumb */
+    }
+}
 
 // Managing Scroll Bar
 div::-webkit-scrollbar {

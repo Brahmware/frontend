@@ -1,10 +1,15 @@
 import { Box, Button, IconButton, SvgIcon } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { colors, transition } from '../../../muiTheme/theme'
+import { colors, scales, transition } from '../../../muiTheme/theme'
 
 const listItemStyle = {
     display: 'block',
+
+    '& .icon__button-icon': {
+        transition: transition('fast'),
+    },
+
     '& #light, & #dark': {
         transition: transition('fast'),
         opacity: '1 !important',
@@ -29,25 +34,30 @@ const listItemStyle = {
     },
 
     '& .icon__avatar': {
-        border: `2px solid ${colors.text__color__dark}`,
+        outline: `1px solid ${colors.muted}`,
         transition: transition('fast'),
     },
 
     '&:hover': {
 
         '& .item__name > span': {
-            color: colors.primary
+            color: colors.primary,
+        },
+
+        '& .icon__button-icon': {
+            transform: `scale(${scales.medium})`,
         },
 
         '& #dark': {
             fill: colors.primary,
             '& path': {
-                fill: colors.primary
+                fill: colors.primary,
             }
         },
 
         '& .icon__avatar': {
-            border: `2px solid ${colors.primary}`,
+            outline: `2px solid ${colors.primary}`,
+            transform: `scale(${scales.small})`,
         },
 
         "& .logout__button": {
@@ -60,7 +70,7 @@ const listItemStyle = {
         }
 
     }
-}
+};
 
 export const DrawerItemHeader = ({
     drawerOpen,
@@ -78,7 +88,7 @@ export const DrawerItemHeader = ({
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'flex-start',
-                alignItems: 'center'
+                alignItems: 'center',
             }}
         >
             {icon}
@@ -96,10 +106,12 @@ export const DrawerItemHeader = ({
                             justifyContent={'flex-start'}
                             alignItems="center"
                             color={colors.text__color}
+
                             sx={{
                                 "& svg": {
-                                    height: '100%'
-                                }
+                                    height: '100%',
+                                    transition: transition('medium'),
+                                },
                             }}
                         >
                             {children}
@@ -109,17 +121,21 @@ export const DrawerItemHeader = ({
             </Box>
         </Button>
     )
-}
+};
 
 export const DrawerItemMenu = ({
+    index,
     drawerOpen,
     icon,
     children,
     linkTo,
-    noLink
+    noLink,
+    selected
 }) => {
+    console.log(selected)
     return (
         <Button
+            key={index}
             component={!noLink && Link}
             to={`/mission-control${linkTo}`}
             sx={{
@@ -132,6 +148,7 @@ export const DrawerItemMenu = ({
                 alignItems: 'center',
                 py: '0.5em',
                 backgroundColor: noLink && 'transparent !important',
+                background: selected && colors.primary,
 
                 "& .MuiTouchRipple-root": {
                     display: noLink ? 'none' : 'block'
@@ -139,17 +156,14 @@ export const DrawerItemMenu = ({
             }}
         >
             <Box
+                className={'icon__button-icon'}
                 height={'4em'}
                 width={'4em'}
                 padding={'1em'}
                 display={'flex'}
                 justifyContent={'center'}
                 alignItems={'center'}
-                sx={{
-                    "& svg": {
-                        height: '100%'
-                    }
-                }}
+                sx={{ "& svg": { height: '100%' } }}
             >
                 {icon}
             </Box>
@@ -167,11 +181,7 @@ export const DrawerItemMenu = ({
                             justifyContent={'flex-start'}
                             alignItems="center"
                             color={colors.text__color}
-                            sx={{
-                                "& svg": {
-                                    height: '100%'
-                                }
-                            }}
+                            sx={{ "& svg": { height: '100%' } }}
                         >
                             {children}
                         </Box>
@@ -180,9 +190,10 @@ export const DrawerItemMenu = ({
             </Box>
         </Button>
     )
-}
+};
 
 export const DrawerItemButton = ({
+    index,
     drawerOpen,
     icon,
     children,
@@ -190,6 +201,7 @@ export const DrawerItemButton = ({
 }) => {
     return (
         <Box
+            key={index}
             sx={{
                 ...listItemStyle,
                 height: '4em',
@@ -229,4 +241,4 @@ export const DrawerItemButton = ({
             </Box>
         </Box>
     )
-}
+};

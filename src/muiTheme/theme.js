@@ -11,7 +11,9 @@ export const colors = {
     warning: "#ef6621",
     dark: "#121212",
     light: "#f8f9fa",
-    muted: "#494949",
+    muted: "#1b1b1b",
+    disabled: "#0e0e0e",
+    disabled__text: "#494949",
     border: "#e1e1e180",
     text__color: "#d5d5d5",
     text__color__dark: "#969696",
@@ -24,6 +26,14 @@ export const colors = {
     black: "#000",
     link__primary: "#F08A32",
     transparent__black: "rgba(0, 0, 0, 0.75)",
+    input_border__color: "#616161",
+};
+
+export const scales = {
+    small: 1.05,
+    medium: 1.10,
+    large: 1.15,
+    extraLarge: 2.00,
 };
 
 export const speed = {
@@ -46,7 +56,7 @@ export const theme = createTheme({
         mode: 'dark',
         primary: {
             main: colors.primary,
-            contrastText: colors.text__color
+            contrastText: colors.darker__card,
         },
         secondary: {
             main: colors.secondary,
@@ -71,8 +81,13 @@ export const theme = createTheme({
         muted: {
             main: colors.muted,
             contrastText: colors.white
+        },
+        action: {
+            disabledBackground: colors.disabled,
+            disabled: colors.disabled
         }
     },
+
     typography: {
         fontFamily: fonts.montserrat,
         fontSize: 12,
@@ -87,6 +102,7 @@ export const theme = createTheme({
             textTransform: 'none'
         }
     },
+
     MuiLinkButton: {
         styleOverrides: {
             root: {
@@ -97,6 +113,18 @@ export const theme = createTheme({
             },
         },
     },
+
+    MuiButton: {
+        styleOverrides: {
+            root: {
+                '&[disabled]': {
+                    color: colors.disabled,
+                    pointerEvents: 'none',
+                },
+            },
+        },
+    },
+
     props: {
         MuiButtonBase: {
             TouchRippleProps: {
@@ -105,7 +133,7 @@ export const theme = createTheme({
                         color: colors.primary
                     }
                 }
-            }
+            },
         }
     },
 }); 

@@ -17,6 +17,7 @@ import { PhotoCameraIcon, UpdateUserIcon } from '../../assets/icons';
 import ModalContent from '../ModalComponent/Modal';
 import { useGetAllUsersMutation, useUpdateUserMutation } from '../../features/users/usersApiSclice';
 import { ALT } from '../../utils/keywards';
+import filemeta from '../../utils/fileMetas';
 
 
 const helperTextObject = {
@@ -117,9 +118,14 @@ const EditUser = ({
         }
     };
 
+    const [profilePicture, setProfilePicture] = useState(userSelected?.profilePicture || '');
     useEffect(() => {
         const subscription = watch((value) => {
             setResponseState({});
+            const { profilePicture: proflPic } = value;
+            if (proflPic) {
+                setProfilePicture(proflPic);
+            }
         });
 
         return () => subscription.unsubscribe();
@@ -145,8 +151,39 @@ const EditUser = ({
                     }}
                 >
                     <div className='edit__user-form_layout'>
+                        <Controller
+                            control={control}
+                            name="profilePicture"
+                            defaultValue=''
+                            render={({ field: { onChange }, fieldState: { error } }) => {
+                                return (
+                                    <UploadImage
+                                        elementClassName={'edit_user-upload_image'}
+                                        ariaLabel={'upload_user_photo'}
+                                        color={colors.muted}
+                                        border={true}
+                                        meta={filemeta.profilePicture}
+                                        onChange={onChange}
+                                        message={'Upload Image'}
+                                        previousImage={profilePicture}
+                                    >
+                                        <PhotoCameraIcon height={'1.5em'} width={'1.5em'} fill={colors.text__color} />
+                                    </UploadImage>
+                                )
+                            }}
+                        />
+                        {/* 
+                        <UploadImage
+                            elementClassName={'edit_user-upload_image'}
+                            ariaLabel={'upload_user_photo'}
+                            color={colors.muted}
+                            message={'Upload Image'}
+                            meta={filemeta.profilePicture}
 
-                        {
+                        >
+                            <PhotoCamera sx={{ height: '2em', width: '2em' }} />
+                        </UploadImage> */}
+                        {/* {
                             !userSelected?.profilePicture ?
                                 <UploadImage
                                     elementClassName={'edit_user-upload_image'}
@@ -201,7 +238,7 @@ const EditUser = ({
                                         </UploadImage>
                                     </div>
                                 </Card>
-                        }
+                        } */}
 
                         <Controller
                             control={control}

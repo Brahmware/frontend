@@ -13,6 +13,7 @@ import { userSchema } from '../../features/users/usersSlice';
 import UploadImage from '../ImageUploadComponent/UploadImage';
 import { AddUserIcon, PhotoCameraIcon } from '../../assets/icons';
 import { ALT } from '../../utils/keywards';
+import filemeta from '../../utils/fileMetas';
 
 const helperTextObject = {
 
@@ -61,11 +62,9 @@ const AddUser = () => {
 
     const handleOnSubmit = async ({ ...formData }) => {
 
-        console.log(formData)
-
         setResponseState({});
 
-        /* try {
+        try {
             const userdata = await addNewUser({ ...formData }).unwrap();
             userdata && setResponseState({
                 success: true,
@@ -76,7 +75,6 @@ const AddUser = () => {
         }
 
         catch (err) {
-
             if (
                 Math.floor(err?.status / 100) === 4 &&
                 err?.data?.property !== ALT
@@ -94,29 +92,37 @@ const AddUser = () => {
                 });
             }
 
+
             else {
                 setResponseState({
                     success: false,
                     message: "Something went Wrong. Please Try Again!"
                 });
             }
-        } */
+        }
 
     }
+
+    const [profilePicture, setProfilePicture] = useState('');
 
     useEffect(() => {
         const subscription = watch((value) => {
             setResponseState({});
+            const { profilePicture: proflPic } = value;
+            if (proflPic) {
+                setProfilePicture(proflPic);
+            }
+
         });
 
         return () => subscription.unsubscribe();
-    }, [watch])
+    }, [watch]);
 
     return (
 
         <Card
             className='add__user'
-            elevation={0}
+            elevation={10}
             sx={{
                 width: '100%',
                 px: '2.5em',
@@ -145,12 +151,19 @@ const AddUser = () => {
                                 <UploadImage
                                     elementClassName={'add_user-upload_image'}
                                     ariaLabel={'upload_user_photo'}
-                                    color={colors.muted}
+                                    color={colors.input_border__color}
                                     border={true}
+                                    meta={filemeta.profilePicture}
                                     onChange={onChange}
                                     message={"Upload Image"}
+                                    previousImage={profilePicture}
+                                    shouldReplace={true}
                                 >
-                                    <PhotoCameraIcon height={'1.5em'} width={'1.5em'} fill={colors.text__color} />
+                                    <PhotoCameraIcon
+                                        height={'1.5em'}
+                                        width={'1.5em'}
+                                        fill={colors.text__color}
+                                    />
                                 </UploadImage>
                             )
                         }}
@@ -284,6 +297,7 @@ const AddUser = () => {
                             )
                         }}
                     />
+
                     <Controller
                         control={control}
                         name="email"
@@ -366,13 +380,19 @@ const AddUser = () => {
                             className='add__user-form_message'
                         >
                             <Typography
-                                color={responseState.success ? colors.success : colors.danger}
+                                color={
+                                    responseState.success ?
+                                        colors.success
+                                        :
+                                        colors.danger
+                                }
                             >
                                 {responseState?.message}
                             </Typography>
                         </Box>
 
                     }
+
 
                     <LoadingButton
                         className='add__user-form_submit-button'
@@ -381,7 +401,13 @@ const AddUser = () => {
                         loading={isLoading}
                         loadingPosition='start'
                         type='submit'
-                        startIcon={<AddUserIcon height={'1em'} width={'1em'} fill={colors.text__color} />}
+                        startIcon={
+                            <AddUserIcon
+                                height={'1em'}
+                                width={'1em'}
+                                fill={colors.text__color}
+                            />
+                        }
                         fullWidth
                         size='large'
                         sx={{
@@ -390,7 +416,13 @@ const AddUser = () => {
                             paddingLeft: '0.6em'
                         }}
                     >
-                        <Typography fontSize={'1.25em'} fontWeight={'medium'} color={'inherit'}>Create</Typography>
+                        <Typography
+                            fontSize={'1.25em'}
+                            fontWeight={'medium'}
+                            color={'inherit'}
+                        >
+                            Create
+                        </Typography>
                     </LoadingButton>
 
                 </div>

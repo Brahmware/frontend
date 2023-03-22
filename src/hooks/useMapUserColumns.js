@@ -40,7 +40,9 @@ const useMapUserColumns = () => {
                                 display={'flex'}
                                 justifyContent={'center'}
                                 alignItems={'center'}
+                                position={'relative'}
                             >
+
                                 <Avatar
                                     alt={params.row?.username}
                                     src={params.row?.profilePicture}
@@ -48,7 +50,10 @@ const useMapUserColumns = () => {
                                         height: '6em',
                                         width: '6em',
                                         Margin: '0 2em',
-                                        border: params.row?.username === currentUser && `0.25em solid ${colors.success}`
+                                        border: params.row?.username === currentUser ?
+                                            `0.2em solid ${colors.success}`
+                                            : 'none'
+                                        ,
                                     }}
                                 />
                             </Box>
