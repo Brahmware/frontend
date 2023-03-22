@@ -1,0 +1,112 @@
+/*--
+/*  4.3 - Why Choose & Counter CSS
+/*----------------------------------------*/
+
+.what-you-get-section {
+    padding: 8em 0em;
+}
+
+// Why Choose
+.why-choose-wrapper {
+    padding-top: 4em;
+    /* 
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    } */
+
+    & .row {
+        & .col {
+            & .service-box {
+                margin-left: -1px;
+
+                @media #{$small-mobile} {
+                    margin-left: 0;
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+}
+
+
+// Counter Section 
+.counter-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 70px;
+
+    @media #{$tablet-device} {
+        padding-top: 50px;
+    }
+
+    @media #{$large-mobile} {
+        padding-top: 30px;
+    }
+}
+
+// Counter Box 
+.counter-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+
+    @media #{$large-mobile} {
+        display: block;
+    }
+
+    @media #{$small-mobile} {
+        display: flex;
+    }
+
+    & .counter-count {
+        & .count {
+            font-size: 50px;
+            color: $primary;
+            font-weight: 600;
+            display: inline-block;
+            line-height: 1;
+
+            @media #{$tablet-device} {
+                font-size: 30px;
+            }
+
+            @media #{$large-mobile} {
+                font-size: 40px;
+            }
+        }
+    }
+
+    & .counter-content {
+        padding-left: 25px;
+
+        @media #{$tablet-device} {
+            padding-left: 10px;
+        }
+
+        @media #{$large-mobile} {
+            padding-left: 0;
+            padding-top: 5px;
+        }
+
+        @media #{$small-mobile} {
+            padding-top: 0;
+            padding-left: 20px;
+        }
+
+        & p {
+            font-size: 16px;
+            text-transform: uppercase;
+            display: inline-block;
+            font-weight: 600;
+            line-height: 1.4;
+
+            @media #{$tablet-device, $large-mobile} {
+                font-size: 14px;
+            }
+        }
+    }
+}

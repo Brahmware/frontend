@@ -1,0 +1,363 @@
+/*--
+/*  03.1 - Header Main CSS
+/*----------------------------------------*/
+
+// Header 
+.header {
+    padding: 25px 0;
+    transition: $transition-base;
+    width: 100vw;
+
+    @media #{$large-mobile} {
+        padding: 20px 0;
+    }
+
+    &.sticky {
+        padding: 25px 0;
+        background-color: $dull-black;
+        box-shadow: $default-shadow;
+
+        @media #{$large-mobile} {
+            padding: 20px 0;
+        }
+    }
+
+    &.no-shadow {
+        box-shadow: none;
+    }
+}
+
+// Header Wrapper 
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Logo 
+.logo {
+    & .logo-elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & .seed-of-life {
+            align-self: center;
+            transition: $transition-base;
+
+            & svg {
+                height: 60px;
+            }
+        }
+
+        & .world-mark {
+            align-self: center;
+            transition: $transition-base;
+
+            & svg {
+                height: 10px;
+            }
+        }
+    }
+
+    & #logo-elements-scrolled {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transition: $transition-base;
+        margin-left: 0px;
+
+        & .seed-of-life {
+            align-self: center;
+            margin-left: 0;
+            margin-right: 24px;
+
+            & svg {
+                height: 50px;
+            }
+        }
+
+        & .world-mark {
+            align-self: center;
+            transition: $transition-base;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            & svg {
+                height: 20px !important;
+            }
+        }
+
+        &:hover {
+            & .seed-of-life {
+                transform: scale(1.15) rotate(180deg);
+                transition: $transition-base;
+            }
+
+            & .world-mark {
+                transform: scale(1.05);
+                transition: $transition-base;
+            }
+        }
+    }
+
+    &:hover {
+        & .logo-elements:not(#logo-elements-scrolled) {
+            & .seed-of-life {
+                transform: scale(1.15) rotate(180deg);
+                transition: $transition-base;
+            }
+
+            & .world-mark {
+                transform: translateY(2px) scale(1.05);
+                transition: $transition-base;
+            }
+        }
+    }
+
+    @media #{$small-mobile} {
+        & .logo-elements:not(#logo-elements-scrolled) {
+            & .seed-of-life {
+                & svg {
+                    height: 40px !important;
+                }
+            }
+
+            & .world-mark {
+                align-self: center;
+                transition: $transition-base;
+
+                & svg {
+                    height: 8px !important;
+                }
+            }
+        }
+
+        & #logo-elements-scrolled {
+            & .seed-of-life {
+                display: none;
+            }
+
+            & .world-mark {
+                align-self: center;
+                transition: $transition-base;
+                margin-top: 12px;
+                margin-bottom: 12px;
+
+                & svg {
+                    height: 15px !important;
+                    transition: $transition-base;
+                }
+            }
+
+            &:hover {
+                & .world-mark {
+                    transform: scale(1.05);
+                    transition: $transition-base;
+                }
+            }
+        }
+    }
+
+    @media #{$large-mobile} {
+        & .logo-elements:not(#logo-elements-scrolled) {
+            & .seed-of-life {
+                & svg {
+                    height: 44px !important;
+                }
+            }
+
+            & .world-mark {
+                align-self: center;
+                transition: $transition-base;
+
+                & svg {
+                    height: 8px !important;
+                }
+            }
+        }
+    }
+}
+
+.header-wrapper .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Header Contact Us
+.header-contact-us {
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: $stroke-lite solid $primary;
+    border-radius: $radius-default;
+    background-color: rgba($black, $opacity-less);
+    cursor: pointer;
+    transition: $transition-base;
+
+    & span {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+        color: $primary;
+        transition: $transition-base;
+    }
+
+    @media #{$small-mobile} {
+        padding: 0 1em;
+
+        & span {
+            font-size: 0.8em !important;
+        }
+    }
+
+    @media #{$large-mobile} {
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+
+        & span {
+            font-size: 0.9em;
+        }
+    }
+
+    &:hover {
+        background-color: $primary;
+        transition: $transition-base;
+
+        & span {
+            color: $black;
+            transform: scale(1.05);
+            transition: $transition-base;
+        }
+    }
+}
+
+// Header Menu Toggler 
+.header-menu-toggler {
+    padding: 0;
+    margin: 0;
+    transition: $transition-base;
+
+    & .menu-toggler {
+        background-color: transparent;
+        padding: 0%;
+        border: 0;
+        height: 25px;
+        width: 32px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    & .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & svg {
+            height: 22px;
+            transition: $transition-base;
+
+            line {
+                stroke: $primary;
+                stroke-width: 4px !important;
+                transition: $transition-base;
+            }
+
+            & #middle-bar {
+                transform: translateX(40%) scaleX(60%);
+                transition: $transition-base;
+            }
+        }
+
+        &.close {
+            & svg {
+                transform: rotate(90deg);
+
+                & #top-bar {
+                    transform: rotate(45deg);
+                    transform-origin: 10% 35%;
+                    transition: $transition-base;
+                }
+
+                & #bottom-bar {
+                    transform: rotate(-45deg);
+                    transform-origin: 13% 64%;
+                    transition: $transition-base;
+                }
+
+                & #middle-bar {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        & .hamburger-menu {
+            & svg {
+                transform: scale($scale-base);
+
+                & #middle-bar {
+                    transform: scaleX(100%);
+                }
+            }
+
+            &.close {
+                & svg {
+                    & #middle-bar {
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$small-mobile} {
+        & svg {
+            height: 13px;
+        }
+    }
+
+    @media #{$large-mobile} {
+        & svg {
+            height: 15px;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba($dull-black, $opacity-very-high);
+    transform: translateX(101%);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-base;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        transition: $transition-base;
+        transform: translateX(0%);
+    }
+}
+
+@media #{$desktop-device, $tablet-device, $tablet-landscape, $large-mobile, $large-mobile-shallow, $small-mobile} {
+    @supports (backdrop-filter: blur(15px) brightness(110%)) {
+        .overlay {
+            background-color: rgba($dull-black, $opacity-high);
+            backdrop-filter: blur(15px) brightness(110%);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "name": "react-eslint-starter",
+    "homepage": "https://www.brahmware.com",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "aos": "^2.3.4",
+        "d3": "^7.3.0",
+        "disable-scroll": "^0.6.0",
+        "disqus-react": "^1.0.11",
+        "dotenv": "^16.0.0",
+        "imagesloaded": "^4.1.4",
+        "isotope-layout": "^3.0.6",
+        "react": "^17.0.2",
+        "react-countup": "^4.3.3",
+        "react-dom": "^17.0.2",
+        "react-google-recaptcha": "^2.1.0",
+        "react-helmet": "^6.1.0",
+        "react-hook-form": "6.14.2",
+        "react-inlinesvg": "^2.3.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.3",
+        "react-visibility-sensor": "^5.1.1",
+        "reactstrap": "^8.9.0",
+        "sass": "^1.32.12",
+        "swiper": "^6.5.9",
+        "topojson": "^3.0.2"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^4.1.3"
+    }
+}

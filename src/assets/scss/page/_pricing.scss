@@ -1,0 +1,174 @@
+/*--
+/*  4.8 - Pricing CSS
+/*----------------------------------------*/
+
+// PRicing Banner Section 
+.pricing-banner-section {
+    height: 820px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$extraBig-device} {
+        height: 965px;
+    }
+
+    @media #{$large-mobile} {
+        height: 500px;
+    }
+
+    @media #{$small-mobile} {
+        height: 420px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: $black;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.75;
+    }
+
+    & .pricing-banner-background {
+        position: absolute;
+        background-image: linear-gradient(to bottom, $primary, $black);
+        top: 0;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        align-items: flex-start;
+        opacity: $opacity-less;
+        filter: $blur-default;
+
+        & svg {
+            width: 100%;
+        }
+    }
+}
+
+// Pricing Banner Content 
+.pricing-banner-content {
+    padding-top: 247px;
+
+    @media #{$large-mobile, $tablet-device} {
+        padding-top: 187px;
+    }
+
+    @media #{$small-mobile} {
+        padding-top: 147px;
+    }
+
+    & .title {
+        font-size: 60px;
+        font-weight: 700;
+        color: $white;
+
+        & span {
+            color: $primary;
+        }
+
+        @media #{$laptop-device} {
+            font-size: 50px;
+        }
+
+        @media #{$desktop-device} {
+            font-size: 42px;
+        }
+
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 38px;
+        }
+
+        @media #{$small-mobile} {
+            font-size: 30px;
+
+            & br {
+                display: none;
+            }
+        }
+    }
+
+    & p {
+        margin-bottom: 0;
+        margin-top: 45px;
+    }
+}
+
+//Pricing Table
+.pricing-table-section {
+    position: relative;
+    z-index: 1;
+
+    & .floor-pricing-explained {
+        font-size: 0.6em;
+        width: 100%;
+        height: 3em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    & .do-more-section {
+        margin: 0;
+        margin-top: 2em;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: default;
+
+        & .download-catalogue {
+            height: 5em;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            & .download-button {
+                height: 60%;
+                width: 100%;
+                border: $stroke-lite solid $primary;
+                background-color: $dull-black;
+                color: $primary;
+                transition: $transition-base;
+                font-size: 1.2em;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    @media #{$tablet-device} {
+        & .do-more-section {
+            & .download-catalogue {
+                & .download-button {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+
+    @media #{$large-mobile, $small-mobile} {
+        padding-top: 0;
+
+        & .floor-pricing-explained {
+            margin-top: 1em;
+        }
+
+        & .do-more-section {
+            flex-direction: column-reverse;
+            gap: 2em;
+
+            & .download-catalogue {
+                & .download-button {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}

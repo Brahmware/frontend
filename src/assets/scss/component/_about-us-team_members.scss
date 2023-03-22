@@ -1,0 +1,179 @@
+.team_members-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    & .team_members-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4em;
+
+        & .title {
+            font-weight: 600;
+            font-size: 2em;
+            color: $primary;
+        }
+
+        & .member {
+            background-color: $dull-black;
+            min-height: 30em;
+            padding: 4em 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: $default-shadow;
+
+            & .image-part {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & .icon-placeholder {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .icon {
+                        height: 12em;
+                        width: 12em;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        transition: $transition-base;
+                    }
+                }
+
+                & .socials-placeholder {
+                    height: 100%;
+                    width: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & .socials {
+                        position: absolute;
+                        transform: translateX(-50%);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1em;
+
+                        & .social-icon {
+                            & svg {
+                                height: 1.2em;
+                                fill: $white;
+                                transition: $transition-base;
+                            }
+
+                            &:hover {
+                                & svg {
+                                    fill: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .member-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & .member-name {
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    color: $primary;
+                    transition: $transition-base;
+                }
+
+                & .member-designation {
+                    font-weight: 500
+                }
+
+                & .member-email {
+                    & span {
+                        font-weight: 800;
+                        color: $primary;
+                        transition: $transition-base;
+                    }
+
+                    &:hover {
+                        & span {
+                            color: $white  !important;
+
+                            & .highlight {
+                                color: $primary  !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                & .image-part {
+                    & .icon {
+                        animation-play-state: paused !important;
+                        transition: $transition-base;
+                        filter: none !important;
+                    }
+                }
+            }
+        }
+
+        & .members {
+            &>.col {
+                &:nth-child(n+1) {
+
+                    & .image-part {
+                        & .icon {
+                            animation: blinking 4999ms ease-in-out 0ms infinite;
+                        }
+                    }
+                }
+
+                &:nth-child(n+2) {
+
+                    & .image-part {
+                        & .icon {
+                            animation: blinking 4999ms ease-in-out 1665ms infinite;
+                        }
+                    }
+                }
+
+                &:nth-child(n+3) {
+
+                    & .image-part {
+                        & .icon {
+                            animation: blinking 4999ms ease-in-out 3333ms infinite;
+                        }
+                    }
+                }
+
+                @keyframes blinking {
+
+                    0%,
+                    100% {
+                        filter: grayscale(0%);
+                    }
+
+                    50% {
+                        transform: scale(95%);
+                        filter: grayscale(100%);
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
+    }
+}

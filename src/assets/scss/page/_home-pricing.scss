@@ -1,0 +1,84 @@
+// Home Pricing Wrapper
+.home-pricing-wrapper {
+    padding-top: 65px;
+    padding-bottom: 100px;
+    overflow-x: clip;
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    & .floor-pricing-explained {
+        font-size: 0.6em;
+        width: 100%;
+        height: 3em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    & .do-more-section {
+        margin: 0;
+        margin-top: 2em;
+        justify-content: space-between;
+        align-items: center;
+        cursor: default;
+        & .download-catalogue {
+            height: 5em;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            & .download-button {
+                height: 60%;
+                width: 100%;
+                border: $stroke-lite solid $primary;
+                background-color: $dull-black;
+                color: $primary;
+                transition: $transition-base;
+                font-size: 1.2em;
+                font-weight: 600;
+                &:hover {
+                    background-color: $primary;
+                    color: $black;
+                }
+            }
+        }
+        & .see-details {
+            font-size: 1em;
+            color: $white;
+        }
+    }
+    @media #{$tablet-device} {
+        & .do-more-section {
+            & .download-catalogue {
+                & .download-button {
+                    font-size: 0.8em;
+                }
+            }
+            & .see-details {
+                font-size: 0.8em;
+            }
+        }
+    }
+    @media #{$large-mobile, $small-mobile} {
+        padding-top: 0;
+        & .floor-pricing-explained {
+            margin-top: 1em;
+        }
+        & .do-more-section {
+            flex-direction: column-reverse;
+            gap: 2em;
+            & .download-catalogue {
+                & .download-button {
+                    font-size: 1.2em;
+                }
+            }
+            & .see-details {
+                padding: 0;
+                margin: 0;
+                font-size: 1em;
+            }
+        }
+    }
+}

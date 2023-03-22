@@ -1,0 +1,8 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 473.9 473.9" style="enable-background:new 0 0 473.9 473.9;" xml:space="preserve">
+    <circle id="face-mask" class="face has--mask" cx="237" cy="237" r="237"/>
+    <path id="mask-slit" class="mask-slit" d="M418.5,161.1c0,0-96-71.1-185.8-71.1S49.3,161.1,49.3,161.1S244.5,290.2,418.5,161.1z"/>
+    <circle id="eye-left" class="eye mask--eye" cx="164.9" cy="155.2" r="37.2"/>
+    <circle id="eye-right" class="eye mask--eye" cx="305.7" cy="155.2" r="37.2"/>
+  </svg>

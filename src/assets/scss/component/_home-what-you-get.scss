@@ -1,0 +1,90 @@
+.service-box {
+    min-height: 32em;
+    padding: 4em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: $dull-black;
+    position: relative;
+    z-index: 2;
+
+    & .title {
+        height: 3em;
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.3em;
+        color: $primary;
+        transition: $transition-base;
+    }
+
+    & .excerpt {
+        height: 8em;
+        font-size: 0.9em;
+        line-height: 1.3em;
+        transition: $transition-base;
+    }
+
+    & .what-you-get {
+        height: 4em;
+        width: 4em;
+
+        & svg {
+            height: inherit;
+            width: inherit;
+            fill: $primary;
+            transition: $transition-base;
+        }
+    }
+
+    & a {
+        height: 1em;
+        font-size: 1.1em;
+        font-weight: 500;
+        transition: $transition-base;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $primary;
+        z-index: -1;
+        transform: scaleX(0);
+        transition: $transition-base;
+    }
+
+    &.active {
+        border-color: $primary;
+
+        &::before {
+            transition: $transition-base;
+            transform: scaleX(1);
+        }
+
+        & .title {
+            color: $black;
+        }
+
+        & .excerpt {
+            color: $black;
+        }
+
+        & .what-you-get {
+            & svg {
+                fill: $black;
+            }
+        }
+
+        & a {
+            color: $dull-black;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

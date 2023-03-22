@@ -1,0 +1,70 @@
+// Swiper Button
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: $opacity-less;
+    transition: $transition-base;
+    @media #{$tablet-device, $large-mobile} {
+        bottom: 35px;
+        right: 40px;
+    }
+    @media #{$small-mobile} {
+        bottom: 15px;
+        right: 20px;
+    }
+    &::after {
+        display: none;
+    }
+    & i {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        & svg {
+            height: 40px;
+            fill: $white;
+            @media #{$large-mobile, $tablet-device, $small-mobile} {
+                height: 15px;
+                fill: $dull-black;
+            }
+        }
+    }
+    &:hover {
+        opacity: $opacity-high;
+        & svg {
+            & path {
+                transform: translateX(0%) !important;
+            }
+        }
+    }
+}
+
+.swiper-button-prev {
+    left: 100px;
+    right: auto;
+    @media #{$tablet-device, $large-mobile} {
+        background-color: $white;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        left: 10px;
+        &:hover {
+            opacity: $opacity-high;
+            transition: $transition-base;
+        }
+    }
+}
+
+.swiper-button-next {
+    left: auto;
+    right: 100px;
+    @media #{$tablet-device, $large-mobile} {
+        background-color: $white;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        right: 10px;
+        &:hover {
+            opacity: $opacity-high;
+            transition: $transition-base;
+        }
+    }
+}

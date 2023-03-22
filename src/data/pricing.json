@@ -1,0 +1,406 @@
+{
+    "pricing": [
+        {
+            "packageID": 0,
+            "packageName": "Small",
+            "packageIcon": "/images/pricing-page/prices/small.svg",
+            "packagePrice": "<amount><curr>₹</curr><number>69,999</number></amount><month>/ p.m.</month>",
+            "isPopular": false,
+            "packageDetails": [
+                {
+                    "solutionID": 0,
+                    "solutionName": "Business Solutions",
+                    "solutionDetails": {
+                        "business_analysis": [
+                            "Sales Reports",
+                            "Analysis in Excel"
+                        ],
+                        "requirement_analysis": [
+                            "Anually"
+                        ],
+                        "marketing_&_sales": [
+                            "Digital Marketing"
+                        ],
+                        "strategy_&_consulting": [
+                            "TA"
+                        ],
+                        "eLarning": [
+                            "Access to Insights"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 1,
+                    "solutionName": "Branding",
+                    "solutionDetails": {
+                        "corporate_design": [
+                            "Digital only"
+                        ],
+                        "corporate_identity": [
+                            "1 logo",
+                            "1 Brand Manual"
+                        ],
+                        "digital_strategy": [
+                            "SEO",
+                            "SMO basic Hygiene"
+                        ],
+                        "brand_strategy": [
+                            "Essential Brand Strategy"
+                        ],
+                        "communication_strategy": [
+                            "Essential Communication Strategy"
+                        ],
+                        "social_media": [
+                            "5 posts on 3 platforms/month"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 2,
+                    "solutionName": "Tech Solutions",
+                    "solutionDetails": {
+                        "frontend_&_backend": [
+                            "Agile Development"
+                        ],
+                        "api": [
+                            "2 APIs"
+                        ],
+                        "ui_&_ux": [
+                            "We help you design UI UX"
+                        ],
+                        "responsive_web_design": [
+                            "Single Page Website"
+                        ],
+                        "prototyping": [
+                            "We implement your prototype"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "packageID": 1,
+            "packageName": "Medium",
+            "packageIcon": "/images/pricing-page/prices/standard.svg",
+            "packagePrice": "<amount><curr>₹</curr><number>1,49,999</number></amount><month>/ p.m.</month>",
+            "isPopular": true,
+            "packageDetails": [
+                {
+                    "solutionID": 0,
+                    "solutionName": "Business Solutions",
+                    "solutionDetails": {
+                        "business_analysis": [
+                            "Sales Reports",
+                            "Predective Analysis",
+                            "Visualization with Tableau"
+                        ],
+                        "requirement_analysis": [
+                            "Bi-Anually"
+                        ],
+                        "business_process_modelling": [
+                            "Initial BPM"
+                        ],
+                        "customer_management": [
+                            "With ZOHO"
+                        ],
+                        "marketing_&_sales": [
+                            "Digital Marketing",
+                            "Insight & Analysis",
+                            "Sales & Channel Management"
+                        ],
+                        "strategy_&_consulting": [
+                            "TA"
+                        ],
+                        "eLarning": [
+                            "Access to Insights"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 1,
+                    "solutionName": "Branding",
+                    "solutionDetails": {
+                        "corporate_design": [
+                            "Digital & Only"
+                        ],
+                        "corporate_identity": [
+                            "1 logo",
+                            "1 Brand Manual",
+                            "Brand Implementation plan"
+                        ],
+                        "digital_strategy": [
+                            "SEO Manager 5hr/week",
+                            "Link Building",
+                            "Keyword Tracking & Targeting"
+                        ],
+                        "brand_strategy": [
+                            "2 hr/week strategy discussion"
+                        ],
+                        "communication_strategy": [
+                            "2 hr/week in Person",
+                            "Software to manage"
+                        ],
+                        "social_media": [
+                            "15 posts 3platforms"
+                        ],
+                        "commercial_design": [
+                            "1 video ad fixed length & format"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 2,
+                    "solutionName": "Tech Solutions",
+                    "solutionDetails": {
+                        "frontend_&_backend": [
+                            "Agile Development",
+                            "1 dedicated Engineer"
+                        ],
+                        "api": [
+                            "5 APIs"
+                        ],
+                        "ui_&_ux": [
+                            "Select from our wide range of UI / UX"
+                        ],
+                        "responsive_web_design": [
+                            "Single Page website"
+                        ],
+                        "app_design_&_development": [
+                            "1 single page app"
+                        ],
+                        "microsites": [
+                            "1 microsite"
+                        ],
+                        "prototyping": [
+                            "Brahmware assisted custom prototype"
+                        ],
+                        "ecommerce_&_online_shops": [
+                            "Single Page Eommerce Website"
+                        ],
+                        "corporate_website": [
+                            "Single Page Corporate Website"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "packageID": 2,
+            "packageName": "Large",
+            "packageIcon": "/images/pricing-page/prices/large.svg",
+            "packagePrice": "<amount><curr>₹</curr><number>2,99,999</number></amount><month>/ p.m.</month>",
+            "isPopular": false,
+            "packageDetails": [
+                {
+                    "solutionID": 0,
+                    "solutionName": "Business Solutions",
+                    "solutionDetails": {
+                        "business_analysis": [
+                            "Everything in Medium... ",
+                            "ETL + Data Warehouse",
+                            "OLAP + D3 and Chart.js"
+                        ],
+                        "requirement_analysis": [
+                            "Quaterly"
+                        ],
+                        "business_process_modelling": [
+                            "Initial BPM",
+                            "2 Updates"
+                        ],
+                        "customer_management": [
+                            "With ZOHO",
+                            "Custom Application"
+                        ],
+                        "marketing_&_sales": [
+                            "Everything in Medium... ",
+                            "Customer Lifecycle Management"
+                        ],
+                        "strategy_&_consulting": [
+                            "TA",
+                            "Brand Research"
+                        ],
+                        "eLarning": [
+                            "Access to Insights",
+                            "Online Material"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 1,
+                    "solutionName": "Branding",
+                    "solutionDetails": {
+                        "corporate_design": [
+                            "Digital & Space branding"
+                        ],
+                        "corporate_identity": [
+                            "1 logo",
+                            "1 Brand Manual",
+                            "Brand Implementation plan"
+                        ],
+                        "digital_strategy": [
+                            "Everything in Medium",
+                            "Dedicated SEO Manager",
+                            "Website Analytics"
+                        ],
+                        "brand_strategy": [
+                            "5 hr/week strategy discussion"
+                        ],
+                        "communication_strategy": [
+                            "5 hr/week in Person",
+                            "Software to manage Strategy"
+                        ],
+                        "social_media": [
+                            "20 posts 10 videos 5 platforms"
+                        ],
+                        "commercial_design": [
+                            "2 video ads fixed length & format"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 2,
+                    "solutionName": "Tech Solutions",
+                    "solutionDetails": {
+                        "frontend_&_backend": [
+                            "Agile Development",
+                            "2 dedicated Engineers"
+                        ],
+                        "api": [
+                            "20 APIs"
+                        ],
+                        "ui_&_ux": [
+                            "Brahmware Designs Your UI UX",
+                            "2 hr/week in Person"
+                        ],
+                        "responsive_web_design": [
+                            "Multi-page Website"
+                        ],
+                        "app_design_&_development": [
+                            "Complex App"
+                        ],
+                        "microsites": [
+                            "3 Microsites"
+                        ],
+                        "prototyping": [
+                            "Brahmware Designs Your Prototype",
+                            "1.5 hr/week in Person"
+                        ],
+                        "ecommerce_&_online_shops": [
+                            "Multi-page Ecommerce Website"
+                        ],
+                        "corporate_website": [
+                            "Multi-page Corporate Website"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "packageID": 3,
+            "packageName": "X Large",
+            "packageIcon": "/images/pricing-page/prices/x-large.svg",
+            "packagePrice": "<amount><curr>₹</curr><number>3,99,999</number></amount><month>/ p.m.</month>",
+            "isPopular": false,
+            "packageDetails": [
+                {
+                    "solutionID": 0,
+                    "solutionName": "Business Solutions",
+                    "solutionDetails": {
+                        "business_analysis": [
+                            "Everything Large... ",
+                            "In-depth Analysis"
+                        ],
+                        "requirement_analysis": [
+                            "On-demand"
+                        ],
+                        "business_process_modelling": [
+                            "Everything in Large... ",
+                            "Process Mining"
+                        ],
+                        "customer_management": [
+                            "Same as Large"
+                        ],
+                        "marketing_&_sales": [
+                            "Everythin in Large... ",
+                            "Customer Experience",
+                            "Consumer & Shopper Insights"
+                        ],
+                        "strategy_&_consulting": [
+                            "Everything in Large... ",
+                            "Implementation Plan"
+                        ],
+                        "eLarning": [
+                            "Everything in Large...",
+                            "Employee Training"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 1,
+                    "solutionName": "Branding",
+                    "solutionDetails": {
+                        "corporate_design": [
+                            "Digital & Space branding",
+                            "OOH Experience management"
+                        ],
+                        "corporate_identity": [
+                            "End-end corporate Identiy Design"
+                        ],
+                        "digital_strategy": [
+                            "Dedicated SEO guidance",
+                            "Everything in Large"
+                        ],
+                        "brand_strategy": [
+                            "We Design your Brand Strategy"
+                        ],
+                        "communication_strategy": [
+                            "On-demand communication strategy",
+                            "Software to manage"
+                        ],
+                        "social_media": [
+                            "30 posts 10 videos on 5 platforms"
+                        ],
+                        "commercial_design": [
+                            "5 video ads fixed length & format"
+                        ]
+                    }
+                },
+                {
+                    "solutionID": 2,
+                    "solutionName": "Tech Solutions",
+                    "solutionDetails": {
+                        "frontend_&_backend": [
+                            "On-demand Front and Back End Development"
+                        ],
+                        "api": [
+                            "On-demand APIs"
+                        ],
+                        "ui_&_ux": [
+                            "Brahmware Designs Your UI UX",
+                            "4 hr/week with our team"
+                        ],
+                        "responsive_web_design": [
+                            "Fully integrated Multi-page Website"
+                        ],
+                        "app_design_&_development": [
+                            "Fully Integrated App"
+                        ],
+                        "microsites": [
+                            "On-demand Microsites"
+                        ],
+                        "prototyping": [
+                            "Brahmware Designs Your Prototype",
+                            "3 hr/week in Person"
+                        ],
+                        "ecommerce_&_online_shops": [
+                            "Fully integrated Ecommerce & Corporate Website"
+                        ],
+                        "corporate_website": [
+                            "Fully integrated Corporate & Ecommerce Website"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,404 @@
+.pricing-table-section {
+    & .pricing-table {
+        margin: 0;
+        padding: 0;
+
+        & .fixedclass_1,
+        & .fixedclass_2,
+        & .fixedclass_3 {
+            display: none !important;
+        }
+
+        &>ul {
+            &>li {
+                & ul {
+                    & li {
+                        height: 5em;
+                        border-bottom: $stroke-lite solid $primary;
+                        border-right: $stroke-lite solid $primary;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: $stroke-lite solid $primary;
+                    border-right: $stroke-lite solid $primary;
+                }
+            }
+
+            &:first-child {
+                &>li {
+                    &:not(:first-child) {
+                        border-left: $stroke-lite solid $primary;
+                    }
+                }
+            }
+
+            &:nth-child(2n+2) {
+                & .package-icon {
+                    & svg {
+                        animation: shake 5000ms ease-in-out 0ms infinite;
+                    }
+                }
+            }
+
+            &:nth-child(2n+4) {
+                & .package-icon {
+                    & svg {
+                        animation: shake 5000ms ease-in-out 1000ms infinite;
+                    }
+                }
+            }
+
+            &:nth-child(2n+6) {
+                & .package-icon {
+                    & svg {
+                        animation: shake 5000ms ease-in-out 2000ms infinite;
+                    }
+                }
+            }
+
+            &:nth-child(2n+8) {
+                & .package-icon {
+                    & svg {
+                        animation: shake 200ms ease-in-out 3000ms infinite;
+                    }
+                }
+            }
+
+            @keyframes shake {
+                0% {
+                    transform: translate(0.5px, 0.5px) rotate(0deg);
+                }
+
+                10% {
+                    transform: translate(-0.5px, -0.5px) rotate(-1deg);
+                }
+
+                20% {
+                    transform: translate(-1.5px, 0px) rotate(1deg);
+                }
+
+                30% {
+                    transform: translate(1.5px, 1px) rotate(0deg);
+                }
+
+                40% {
+                    transform: translate(0.5px, -0.5px) rotate(1deg);
+                }
+
+                50% {
+                    transform: translate(-0.5px, 1px) rotate(-1deg);
+                }
+
+                60% {
+                    transform: translate(-1.5px, 0.5px) rotate(0deg);
+                }
+
+                70% {
+                    transform: translate(1.5px, 0.5px) rotate(-1deg);
+                }
+
+                80% {
+                    transform: translate(-0.5px, -0.5px) rotate(1deg);
+                }
+
+                90% {
+                    transform: translate(0.5px, 1px) rotate(0deg);
+                }
+
+                100% {
+                    transform: translate(0.5px, 0.5px) rotate(-1deg);
+                }
+            }
+        }
+
+        & .title {
+            height: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.3em;
+            font-weight: 600;
+            border: 0;
+            background-color: $primary;
+            color: $black;
+        }
+
+        & .package-label {
+            height: 10em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $primary;
+
+            & .package-icon {
+                padding: 0;
+                width: max-content;
+
+                & svg {
+                    height: 8em;
+                    fill: $black;
+                }
+            }
+
+            & .package-title {
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+
+        & .service-names {
+            & .service {
+                font-size: 1em;
+                font-weight: 500;
+                color: $white;
+            }
+        }
+
+        & .package-details {
+            & .service-label {
+                & .service {
+                    font-size: 0.8em;
+                    height: 6.25em;
+
+                    &.tr {
+                        & svg {
+                            height: 1em;
+                        }
+
+                        fill: $green;
+                    }
+
+                    &.fl {
+                        & svg {
+                            height: 1em;
+                        }
+
+                        fill: $red;
+                    }
+
+                    & .span-list {
+                        padding: 5%;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        & .floor-price {
+            height: 3em;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: $primary;
+            background-color: $dull-black;
+
+            &:not(:last-child) {
+                border-right: $stroke-lite solid $primary;
+            }
+
+            & .item-wrapper {
+                &>span {
+                    font-size: 1.2em;
+
+                    & astr {
+                        color: $white;
+                    }
+                }
+
+                & div {
+                    height: max-content;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.25em;
+
+                    & amount {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 1.2em;
+                        gap: 0.3em;
+
+                        & curr {
+                            color: $white;
+                        }
+                    }
+
+                    & month {
+                        color: $white;
+                        font-size: 0.4em;
+                        transform: translateY(0.8em);
+                    }
+                }
+            }
+        }
+
+        .package-solution-names {
+            & .package-label {
+                opacity: 0;
+                border: 0;
+            }
+        }
+
+        .item-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-names {
+            & .item-wrapper {
+                justify-content: flex-start;
+            }
+        }
+
+        .service-label {
+            & .title {
+                position: sticky;
+            }
+        }
+
+        @media #{$tablet-device, $tablet-landscape} {
+            &>ul {
+                &>li {
+                    & ul {
+                        & li {
+                            height: 10em;
+                        }
+                    }
+                }
+            }
+
+            & .package-label {
+                & .package-icon {
+                    & svg {
+                        height: 5em;
+                    }
+                }
+            }
+
+            & .package-details {
+                & .service-label {
+                    & .service {
+                        height: 12.5em;
+                    }
+                }
+            }
+
+            & .item-wrapper {
+                &>span {
+                    font-size: 0.9em !important;
+
+                    & astr {
+                        color: $white;
+                    }
+                }
+
+                & div {
+                    flex-direction: column;
+                    gap: 0 !important;
+
+                    & span {
+                        font-size: 1em;
+                    }
+
+                    & amount {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 1em;
+                        gap: 0.1em;
+
+                        & curr {
+                            color: $white;
+                        }
+                    }
+
+                    & month {
+                        color: $white;
+                        font-size: 0.3em !important;
+                    }
+                }
+            }
+        }
+
+        @media #{$large-mobile, $small-mobile} {
+
+            & .fixedclass_1,
+            & .fixedclass_2,
+            & .fixedclass_3 {
+                display: block !important;
+            }
+
+            &>ul {
+                &:not(:first-child) {
+                    &:nth-child(odd) {
+                        &>li {
+                            border-left: $stroke-lite solid $primary;
+                        }
+                    }
+                }
+            }
+
+            &>ul {
+                &>li {
+                    & ul {
+                        & li {
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+
+            & .package-label {
+                & .package-icon {
+                    & svg {
+                        height: 6em;
+                    }
+                }
+            }
+
+            & .package-details {
+                & .service-label {
+                    & .service {
+                        height: 70px;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            & .package-solution-names,
+            & .package-details {
+                margin-top: 8em;
+
+                & .title {
+                    font-size: 1.2em;
+                }
+            }
+
+            & .item-wrapper {
+                &>span {
+                    font-size: 0.9em !important;
+                }
+
+                & div {
+                    & amount {
+                        font-size: 0.9em;
+                    }
+
+                    & month {
+                        font-size: 0.3em !important;
+                        transform: translateY(0.6em) !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.location-component {
+    height: max-content;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    & .location-pin {
+        height: max-content;
+        width: max-content;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .location-image {
+            height: 15em;
+            fill: $highest-transparent-white;
+            position: relative;
+            & .inner-entry-location {
+                & .inner-location {
+                    position: absolute;
+                    transform: scale(0.75);
+                    fill: $primary;
+                }
+                & .world-map {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+    & .road {
+        position: absolute;
+        height: 15em;
+        fill: $primary;
+    }
+}

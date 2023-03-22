@@ -1,0 +1,47 @@
+/*----------------------------------------*/
+
+
+/*  02. Component CSS
+/*----------------------------------------*/
+
+@import "component/button";
+@import "./component/home-clientcomponent";
+@import "./component/home-about";
+@import "component/form";
+@import "component/pricingtable";
+@import "component/blockquote";
+@import "component/icons";
+@import "component/swiperbutton";
+@import "component/arrowlink";
+@import "component/tabcomponent";
+@import "component/mapcomponent";
+@import "component/brahmnaut";
+@import "component/stackgamecomponent";
+@import "component/homepricingtable";
+@import "component/locationcomponent";
+@import "./component/iconanimation";
+@import "./component/aboutusanimationcomponent";
+@import "./component/modal";
+@import "./component/commands-smiley";
+
+/* ----------------------- Home Page Components ---------------------------- */
+
+@import "./component/home-what-you-get";
+
+/* ----------------------- About Us Page Components ---------------------------- */
+
+@import "./component/about-us-banner";
+@import "./component/about-us-content";
+@import "./component/about-us-team_members";
+@import "./component/about-us-principles";
+@import "./component/about-us-mission";
+@import "./component/about-us_conclusion";
+
+@import "./component/not-web-admin";
+@import "./component/web-admin";
+
+/* ----------------------- Mission Comtrol Components ---------------------------- */
+
+@import "./component/add-user";
+@import "./component/edit-user";
+@import "./component/feedback_reaction";

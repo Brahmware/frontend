@@ -1,0 +1,259 @@
+// About banner 
+/* .about-banner-section {
+    position: relative;
+
+    & .social {
+        position: absolute;
+        top: 95%;
+        display: flex;
+        z-index: 2;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            left: var(--bs-gutter-x);
+            bottom: 40px;
+        }
+
+        @media #{$small-mobile} {
+            left: 20px;
+            bottom: 20px;
+        }
+
+        @media #{$large-mobile-shallow} {
+            bottom: 0;
+            top: 90%;
+            left: 60%;
+        }
+
+        @media #{$tablet-landscape} {
+            bottom: 0;
+            left: 60%;
+            top: 75%;
+        }
+
+        & li {
+            &+li {
+                margin-left: 45px;
+
+                @media #{$large-mobile} {
+                    margin-left: 30px;
+                }
+
+                @media #{$small-mobile} {
+                    margin-left: 20px;
+                }
+            }
+
+            & a {
+                & .social-icon {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    margin-right: 12px !important;
+
+                    & svg {
+                        height: 18px;
+                        fill: $white;
+                        transition: $transition-base;
+                    }
+
+                    @media #{$large-mobile} {
+                        & svg {
+                            height: 15px !important;
+                        }
+                    }
+
+                    @media #{$small-mobile} {
+                        & svg {
+                            height: 15px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    & .social-icon {
+                        & svg {
+                            transform: scale($scale-high);
+                            fill: $primary;
+                            transition: $transition-base;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// About banner 
+.about-banner {
+    min-height: 100vh;
+    z-index: 1;
+    background-color: #070707;
+    position: relative;
+
+    @media #{$extraBig-device} {
+        height: 965px;
+    }
+
+    @media #{$large-mobile} {
+        height: 720px;
+    }
+
+    @media #{$small-mobile} {
+        height: 680px;
+    }
+}
+
+// About banner Images
+.about-banner-image {
+    position: absolute;
+    left: 55%;
+
+    & img {
+        height: 540px;
+    }
+
+    text-align: left;
+    z-index: -1;
+
+    @media #{$large-mobile} {
+        display: none;
+    }
+}
+
+// About banner Content
+.about-banner-content {
+    & .banner-title {
+        font-size: 60px;
+        font-weight: 700;
+        color: $white;
+
+        & span {
+            color: $primary;
+        }
+
+        @media #{$laptop-device} {
+            font-size: 50px;
+        }
+
+        @media #{$desktop-device} {
+            font-size: 42px;
+        }
+
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 38px;
+        }
+
+        @media #{$small-mobile} {
+            font-size: 24px;
+
+            & br {
+                display: none;
+            }
+        }
+    }
+
+    & .banner-social {
+        padding-top: 55px;
+
+        @media #{$laptop-device} {
+            padding-top: 45px;
+        }
+
+        @media #{$desktop-device} {
+            padding-top: 35px;
+        }
+
+        @media #{$tablet-device, $large-mobile} {
+            padding-top: 25px;
+        }
+
+        & p {
+            margin-bottom: 2px;
+        }
+
+        & ul {
+            display: flex;
+
+            @media #{$large-mobile} {
+                flex-wrap: wrap;
+            }
+
+            & li {
+                position: relative;
+
+                &+li {
+                    &::before {
+                        content: '-';
+                        font-size: 16px;
+                        color: $white;
+                        margin: 0 10px;
+                        font-weight: 700;
+                        line-height: 1;
+                    }
+                }
+
+                & a {
+                    font-size: 24px;
+                    font-weight: 700;
+                    font-family: $headings-font-family;
+
+                    @media #{$tablet-device} {
+                        font-size: 20px;
+                    }
+
+                    @media #{$small-mobile} {
+                        font-size: 16px;
+                    }
+
+                    &.twitter {
+                        color: #00ccff;
+                    }
+
+                    &.behance {
+                        color: #0066ff;
+                    }
+
+                    &.dribbble {
+                        color: #ff0066;
+                    }
+
+                    &.github {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    & .banner-service {
+        padding-top: 60px;
+
+        @media #{$laptop-device} {
+            padding-top: 50px;
+        }
+
+        @media #{$desktop-device} {
+            padding-top: 40px;
+        }
+
+        @media #{$tablet-device, $large-mobile} {
+            padding-top: 30px;
+        }
+
+        & .service-text {
+            margin-top: 20px;
+
+            & span {
+                font-size: 24px;
+                font-weight: 700;
+                font-family: $headings-font-family;
+                color: $white;
+
+                @media #{$small-mobile} {
+                    & br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+} */

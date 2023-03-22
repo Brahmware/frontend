@@ -1,0 +1,147 @@
+.mission-vision-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    & .mission-vision-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4em;
+
+        & .title {
+            font-weight: 600;
+            font-size: 2em;
+            color: $primary;
+        }
+
+        & .content-section {
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .mission,
+            & .vision {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                & .gear-image {
+                    & svg {
+                        fill: $dull-black;
+                        height: 35em;
+                        animation: rotate-gear-anticlockwise 60000ms linear infinite;
+                    }
+
+                    &.deactivate-animation {
+                        & svg {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+
+                & .content-inside {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    max-width: 60%;
+                    max-height: 60%;
+                    gap: 1em;
+
+                    & .title {
+                        font-size: 1.5em;
+                        font-weight: 500;
+                        color: $white;
+                    }
+
+                    & .divider {
+                        height: 0.05em;
+                        width: 33.33%;
+                        background-color: $primary;
+                    }
+
+                    & .content {
+                        font-size: 1em;
+                    }
+                }
+
+            }
+
+            & .vision {
+                & .gear-image {
+                    transform: rotate(22.5deg);
+
+                    & svg {
+                        fill: $primary;
+                        animation: rotate-gear-clockwise 60000ms linear infinite;
+                    }
+
+                    &.deactivate-animation {
+                        & svg {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+
+            }
+
+            @keyframes rotate-gear-clockwise {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                50% {
+                    transform: rotate(180deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotate-gear-anticlockwise {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                50% {
+                    transform: rotate(-180deg);
+                }
+
+                100% {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
+    }
+
+    @media #{$tablet-device} {
+        & .content-section {
+            font-size: 0.7em;
+        }
+    }
+
+    @media #{$large-mobile} {
+        & .content-section {
+            flex-direction: column;
+            font-size: 0.7em;
+        }
+    }
+
+    @media #{$small-mobile, $extra-small-mobile} {
+        & .content-section {
+            flex-direction: column;
+            font-size: 0.6em;
+        }
+    }
+
+}

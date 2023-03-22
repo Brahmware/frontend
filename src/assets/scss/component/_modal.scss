@@ -1,0 +1,150 @@
+.modal-component {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.animate-modal-zoom {
+        & .modal-wrapper {
+            & .modal-content-wrapper {
+                animation: zoom-in 600ms linear 0ms 1;
+
+                @keyframes zoom-in {
+                    0% {
+                        transform: scale(0);
+                    }
+
+                    70% {
+                        transform: scale(1.1);
+                    }
+
+                    90% {
+                        transform: scale(0.9);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+
+    & .modal-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1);
+
+        & .modal-background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: $dull-black, $alpha: 0.9);
+
+            /* if backdrop support: very transparent and blurred */
+            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                background-color: rgba($color: $black, $alpha: 0.5);
+                -webkit-backdrop-filter: blur(2em);
+                backdrop-filter: blur(2em);
+            }
+
+            cursor: pointer;
+        }
+
+        & .modal-content-wrapper {
+            width: 40%;
+            padding: 3em 2em;
+            border-radius: 1em;
+            background-color: $dull-black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            & .close-button {
+                position: absolute;
+                top: 0.5em;
+                right: 0.8em;
+                cursor: pointer;
+
+                & svg {
+                    height: 1.3em;
+                    fill: $white;
+                    transition: $transition-base;
+                }
+
+                &:hover {
+                    & svg {
+                        fill: $red;
+                    }
+                }
+            }
+
+            & .content {
+                display: flex;
+                justify-content: center;
+                gap: 2em;
+                align-items: center;
+
+                & .icon-part {
+
+                    & .tick,
+                    & .cross {
+                        height: 4em;
+                        width: 4em;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        & svg {
+                            height: 2em;
+                            fill: $white;
+                        }
+                    }
+
+                    & .tick {
+                        background-color: $primary;
+                    }
+
+                    & .cross {
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$tablet-device} {
+        & .modal-wrapper {
+            & .modal-content-wrapper {
+                width: 60%;
+            }
+        }
+    }
+
+    @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
+        & .modal-wrapper {
+            & .modal-content-wrapper {
+                width: 90%;
+
+                & .content {
+                    flex-direction: column;
+
+                    & .message {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+[
+    {
+        "slider": [
+            {
+                "id": 1,
+                "backgroundImage": "/images/slider/software.mp4",
+                "subTitle": "Developing Business Systems",
+                "title": "Software that<br />drive <span>Revenue</span>",
+                "desc": "We help ambitious brands sell more product."
+            },
+            {
+                "id": 2,
+                "backgroundImage": "/images/slider/analytics.mp4",
+                "subTitle": "Analytics is in our DNA",
+                "title": "Analytics that <br />boosts <span>Profits</span>",
+                "desc": "We provide deep analytics to businesses to maximize their profits."
+            },
+            {
+                "id": 3,
+                "backgroundImage": "/images/slider/customer-service.mp4",
+                "subTitle": "You are our priority",
+                "title": "You dream, <br /> we make it <span>Real</span>",
+                "desc": "Our customers are our uttermost duty."
+            }
+        ]
+    },
+    {},
+    {
+        "iconBox": [
+            {
+                "id": "1",
+                "icon": "/images/what-you-get/professional.svg",
+                "title": "Professional and Dedicated Team",
+                "excerpt": "We are a squad of proficient professionals with experience in diverse industries. We are devoted to our work and committed to deliver exceptional results."
+            },
+            {
+                "id": "2",
+                "icon": "/images/what-you-get/design.svg",
+                "title": "Creative and Innovative Designs",
+                "excerpt": "We have artistic designers in our team who can convey ideas through their work. We create exquisite designs that represent your brand and its purpose."
+            },
+            {
+                "id": "3",
+                "icon": "/images/what-you-get/pricing.svg",
+                "title": "Affordable and Flexiable",
+                "excerpt": "Our purpose is to get work satisfaction from you hence we offer quality work at affordable prices also we are flexible for any work changes."
+            },
+            {
+                "id": "4",
+                "icon": "/images/what-you-get/customer-support.svg",
+                "title": "24/7 Support",
+                "excerpt": "We are listening to you all the time. We offer complete support during and after the completion of projects. We resolve your issues on time."
+            }
+        ]
+    },
+    {
+        "funfact": [
+            {
+                "id": 1,
+                "number": 8000,
+                "title": "Partner <br /> worldwide"
+            },
+            {
+                "id": 2,
+                "number": 1250,
+                "title": "employees and <br /> staffs"
+            },
+            {
+                "id": 3,
+                "number": 904,
+                "title": "project completed <br /> on 60 countries"
+            }
+        ]
+    },
+    {
+        "testimonial": [
+            {
+                "id": 1,
+                "icon": "/images/home-testimonial/Ryan.jpg",
+                "name": "Ryan Betthalyn",
+                "designation": "CEO at Chobham Manor",
+                "excerpt": "Brahmware is exactly what our business has been lacking. I highly endorse it. It really saves me time and effort."
+            },
+            {
+                "id": 2,
+                "icon": "/images/home-testimonial/Ruthanne.jpg",
+                "name": "Ruthanne Enniss",
+                "designation": "CMO at Smiley Cat",
+                "excerpt": "Brahmware Web Design is the real deal! Best. Product. Ever! I have gotten at leat 50 times the value from Brahmware Web Design."
+            },
+            {
+                "id": 3,
+                "icon": "/images/home-testimonial/Dipro.png",
+                "name": "Dipro Mondal",
+                "designation": "Director at Brahmcast",
+                "excerpt": "I have used Brahmware a couple of times and I am very happy with the results each time."
+            }
+        ]
+    },
+    {
+        "packages": [
+            {
+                "id": 1,
+                "badgeType": "false",
+                "badge": "popular",
+                "icon": "/images/pricing-page/prices/small.svg",
+                "title": "Small",
+                "price": "<amount><curr>₹</curr><number>69,999</number></amount><month>/ month</month>",
+                "pricingList": [
+                    "For Small Businesses",
+                    "Essential Digital Presence",
+                    "Essential Branding"
+                ]
+            },
+            {
+                "id": 2,
+                "badgeType": "true",
+                "badge": "popular",
+                "icon": "/images/pricing-page/prices/standard.svg",
+                "title": "Medium",
+                "price": "<amount><curr>₹</curr><number>1,49,999</number></amount><month>/ month</month>",
+                "pricingList": [
+                    "SME Focused",
+                    "Multiple Business Reports",
+                    "360° Branding"
+                ]
+            },
+            {
+                "id": 3,
+                "badgeType": "false",
+                "badge": "popular",
+                "icon": "/images/pricing-page/prices/large.svg",
+                "title": "Large",
+                "price": "<amount><curr>₹</curr><number>2,99,999</number></amount><month>/ month</month>",
+                "pricingList": [
+                    "For Large Businesses",
+                    "Total Brand Awareness",
+                    "Versatile Tech Solutions"
+                ]
+            },
+            {
+                "id": 4,
+                "badgeType": "false",
+                "badge": "popular",
+                "icon": "/images/pricing-page/prices/x-large.svg",
+                "title": "X Large",
+                "price": "<amount><curr>₹</curr><number>3,99,999</number></amount><month>/ month</month>",
+                "pricingList": [
+                    "Enterprise Focused",
+                    "Aggressive Reputation Management",
+                    "Industry Leading Tech"
+                ]
+            }
+        ]
+    },
+    {
+        "ourBrahmand": [
+            {
+                "id": "1",
+                "icon": "/images/our-brahmand/businessprocess.svg",
+                "title": "Business Solutions",
+                "excerpt": "We build your presence on web and boost your business with modern technologies."
+            },
+            {
+                "id": "2",
+                "icon": "/images/our-brahmand/branding.svg",
+                "title": "Branding",
+                "excerpt": "Your brand is how people perceive you wherever they interact with your business. Our brand architects will brand your business to leave a positive impact on your customers on every encounter."
+            },
+            {
+                "id": "3",
+                "icon": "/images/our-brahmand/websiteandapplication.svg",
+                "title": "Tech Solutions",
+                "excerpt": "Requirements analysis is a process used to determine the needs and expectations of a new product. Our domain experts help you determine your requirement needs."
+            }
+        ]
+    }
+]

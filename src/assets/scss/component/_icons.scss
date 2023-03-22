@@ -1,0 +1,59 @@
+// Right Arrow Icon
+#rightarrowIcon {
+    & #arrow {
+        transform: translateX(-20%);
+        transition: $transition-base;
+    }
+    & #line {
+        transform: translateX(-100%);
+        transition: $transition-base;
+    }
+    &:hover {
+        & #arrow {
+            transform: translateX(0%);
+        }
+        & #line {
+            transform: translateX(0%);
+        }
+    }
+}
+
+// Left Arrow Icon
+#leftarrowIcon {
+    & #arrow {
+        transform: translateX(20%);
+        transition: $transition-base;
+    }
+    & #line {
+        transform: translateX(100%);
+        transition: $transition-base;
+    }
+    &:hover {
+        & #arrow {
+            transform: translateX(0%);
+        }
+        & #line {
+            transform: translateX(0%);
+        }
+    }
+}
+
+// Top Arrow Icon
+#toparrowIcon {
+    & #arrow {
+        transform: translateY(20%);
+        transition: $transition-base;
+    }
+    & #line {
+        transform: translateY(100%);
+        transition: $transition-base;
+    }
+    &:hover {
+        & #arrow {
+            transform: translateY(0%);
+        }
+        & #line {
+            transform: translateY(0%);
+        }
+    }
+}

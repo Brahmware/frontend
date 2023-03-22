@@ -1,0 +1,112 @@
+.aboutus-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    & .aboutus-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+
+        & .title {
+            font-weight: 600;
+            font-size: 2em;
+            color: $primary;
+            align-self: flex-start;
+        }
+
+        & .content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4em;
+
+            & .aboutus-paragraph-graphics {
+                & svg {
+                    height: 35em;
+                }
+            }
+
+            & .paragraphs {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 4em;
+
+                & .first-paragraph {
+                    font-size: 1.2em;
+                    line-height: 1.3em;
+                    text-align: left;
+
+                    & span {
+                        font-weight: 500;
+                        color: $white;
+
+                        & tspan {
+                            color: $primary;
+                            font-weight: 600;
+                        }
+                    }
+
+                }
+
+                & .second-paragraph {
+                    font-size: 1em;
+                    line-height: 1.2em;
+                    text-align: justify;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                & .message {
+                    font-size: 1.2em;
+                    line-height: 1.3em;
+                    text-align: left;
+
+                    & span {
+                        font-weight: 600;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
+    }
+
+    @media #{$tablet-device} {
+
+        & .aboutus-content {
+
+            & .content {
+                flex-direction: column;
+
+                & .aboutus-paragraph-graphics {
+                    & svg {
+                        height: 30em;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
+        & .aboutus-content {
+            & .content {
+                flex-direction: column;
+
+                & .aboutus-paragraph-graphics {
+                    & svg {
+                        height: 20em;
+                    }
+                }
+            }
+        }
+    }
+}

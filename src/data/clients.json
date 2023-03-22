@@ -1,0 +1,24 @@
+{
+    "brand": [
+        {
+            "id": 1,
+            "image": "./images/clients/brand_ims.svg"
+        },
+        {
+            "id": 2,
+            "image": "./images/clients/brand_vanik.one.svg"
+        },
+        {
+            "id": 3,
+            "image": "./images/clients/brand_asankha.svg"
+        },
+        {
+            "id": 4,
+            "image": "./images/clients/brand_sb.svg"
+        },
+        {
+            "id": 5,
+            "image": "./images/clients/client-5.svg"
+        }
+    ]
+}

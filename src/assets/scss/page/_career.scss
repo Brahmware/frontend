@@ -1,0 +1,339 @@
+// MOfifyong Footer
+.career-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* & .footer {
+        & .footer-info-box {
+            display: none;
+        }
+    } */
+}
+
+// Career Banner
+.career-banner-section {
+    & .career-heading-wrapper {
+        margin-top: 10em;
+        margin-bottom: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: $white;
+        gap: 1em;
+        & .career-title {
+            font-size: 4em;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+        & .career-subtitle {
+            font-size: 2em;
+            font-weight: 500;
+        }
+        & span {
+            color: $primary;
+        }
+        & .graphics {
+            height: 20em;
+            & .brahmnaut {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 10em;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .career-heading-wrapper {
+            &>div {
+                flex-direction: column;
+            }
+        }
+    }
+    @media #{$small-mobile, $extra-small-mobile} {
+        & .career-heading-wrapper {
+            &>div {
+                flex-direction: column;
+            }
+            & .career-title {
+                font-size: 2.5em;
+                line-height: 1.2em;
+            }
+            & .career-subtitle {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+// Career World
+.career-world {
+    height: 60vh;
+    width: 100%;
+    background-color: $dull-black;
+    padding-top: $padding-5;
+    padding-bottom: $padding-5;
+    padding-left: $padding-3;
+    padding-right: $padding-3;
+    margin-top: $margin-2;
+    margin-bottom: $margin-2;
+    border-radius: $medium-border-radius;
+    & .world-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 2em;
+        width: 100%;
+        background-color: $lower-transparent-black;
+        border-radius: $medium-border-radius;
+        & li {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            color: $white;
+            transition: $transition-base;
+            &:hover {
+                color: $primary;
+            }
+            &.active {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 2em;
+                    width: 5px;
+                    border-right: $stroke-default solid $primary;
+                    transform: translateX(calc(2em - 5px));
+                }
+            }
+        }
+    }
+    & .description {
+        display: none;
+        height: 100%;
+        padding: 2em;
+        background-color: $lower-transparent-black;
+        border-radius: $medium-border-radius;
+        &.show {
+            display: block;
+        }
+    }
+    @media #{$large-mobile, $tablet-device} {
+        margin: 0;
+        padding-top: $padding-10;
+        padding-bottom: $padding-10;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: max-content;
+        gap: 3em;
+        &>div {
+            width: 100%;
+        }
+        & .world-menu {
+            flex-direction: row;
+            width: 50%;
+            @media #{$large-mobile} {
+                width: 100%;
+            }
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        & li {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            &.active {
+                color: $primary;
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 1px;
+                    width: 0.8em;
+                    border-bottom: $stroke-lite solid $primary;
+                    transform: translateY(1.5em);
+                }
+            }
+        }
+    }
+    @media #{$small-mobile, $extra-small-mobile} {
+        gap: 1em;
+        & .world-menu {
+            width: 100%;
+        }
+    }
+}
+
+// Jobs Container
+.jobs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $white;
+    & span {
+        color: $primary
+    }
+    & .title {
+        font-size: 3em;
+        font-weight: 600;
+    }
+    & .job {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $dull-black;
+        padding-top: $padding-2;
+        padding-bottom: $padding-5;
+        padding-left: $padding-5;
+        padding-right: $padding-5;
+        margin-top: $margin-2;
+        margin-bottom: $margin-2;
+        border-radius: $medium-border-radius;
+        gap: 0;
+        transition: gap $transition-specific;
+        &.open {
+            gap: 2em;
+        }
+        & .job-heading {
+            /* display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            gap: 1em; */
+            margin: 0;
+            &>* {
+                padding: 0;
+                width: max-content;
+            }
+            width: 100%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            & .title {
+                font-size: 2em;
+                font-weight: 500;
+            }
+            & .subtitle {
+                display: flex;
+                flex-direction: row;
+                gap: 2em;
+                align-items: flex-start;
+            }
+            & .expand-button {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                & svg {
+                    height: 1.5em;
+                    transform: rotate(180deg);
+                    transition: $transition-base;
+                    cursor: pointer;
+                    pointer-events: all;
+                    & path {
+                        fill: $primary;
+                    }
+                }
+                &.up {
+                    svg {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+        & .details-section {
+            overflow: hidden;
+            transition: height $transition-specific;
+            & .job-details {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1em;
+                color: rgba($white, 0.8);
+                padding: $padding-5;
+                background-color: $lower-transparent-black;
+                border-radius: $medium-border-radius;
+                height: max-content;
+                transition: $transition-base;
+                & .description {
+                    text-align: justify;
+                    font-size: 1.1em;
+                    line-height: 1.4em;
+                }
+                & ul {
+                    list-style: circle;
+                    & li {
+                        margin-left: 2em;
+                    }
+                }
+                & .experience {
+                    list-style: none;
+                }
+            }
+        }
+    }
+    & .apply {
+        margin-top: 2em;
+        & .apply-button {
+            padding: 1em;
+            background-color: $lower-transparent-black;
+            border: $stroke-lite solid $primary;
+            border-radius: $tiny-border-radius;
+            transition: $transition-base;
+            font-weight: 500;
+            &:hover {
+                background-color: $primary;
+                color: $black;
+            }
+        }
+    }
+    @media #{$small-mobile, $extra-small-mobile} {
+        & .title {
+            font-size: 2.5em;
+        }
+        & .job {
+            gap: 0;
+            & .job-heading {
+                margin: 0;
+                &>* {
+                    padding: 0;
+                    width: max-content;
+                }
+                & .title {
+                    & .job-title {
+                        font-size: 0.6em;
+                    }
+                }
+                & .subtitle {
+                    font-size: 0.6em;
+                    gap: 1em;
+                }
+                & .expand-button {
+                    & svg {
+                        height: 1em;
+                    }
+                }
+            }
+            & .details-section {
+                & .job-details {
+                    & .description {
+                        font-size: 0.7em;
+                    }
+                    & ul {
+                        font-size: 0.6em;
+                    }
+                }
+            }
+        }
+        & .apply {
+            margin: 0;
+            margin-top: 1em;
+            font-size: 0.6em;
+        }
+    }
+}

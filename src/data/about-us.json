@@ -1,0 +1,196 @@
+{
+    "tagline": "Proud Indian Company to </br>Help You Navigate </br>Your <tspan>Next</tspan>",
+    "team_members": [
+        {
+            "id": 101,
+            "name": "Sanchayan Bhunia",
+            "email": {
+                "toshow": "sanchayan@brahm<span class='highlight'>ware</span>.com",
+                "address": "sanchayan@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "sanchayan-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": "https://twitter.com/Sanchayan_Bh"
+                },
+                {
+                    "id": "sanchayan-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/sanchayan-bhunia/"
+                },
+                {
+                    "id": "sanchayan-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/sanchayan.bhunia.1"
+                }
+            ],
+            "icon": "/images/about-page/team-members/sanchayan/profile-picture.jpg",
+            "designation": "Founder, President, CTO"
+        },
+        {
+            "id": 102,
+            "name": "Prakash Mandal",
+            "email": {
+                "toshow": "prakash@brahm<span class='highlight'>ware</span>.com",
+                "address": "prakash@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "prakash-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": "https://twitter.com/PrakashBigBrain"
+                },
+                {
+                    "id": "prakash-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/prakash-mandal-89a04b7b/"
+                },
+                {
+                    "id": "prakash-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/Prakash.Mandal22"
+                }
+            ],
+            "icon": "/images/about-page/team-members/prakash/profile-picture.jpg",
+            "designation": "Founder, MD, CEO"
+        },
+        {
+            "id": 103,
+            "name": "Shashi Bhushan Prasad",
+            "email": {
+                "toshow": "shashi@brahm<span class='highlight'>ware</span>.com",
+                "address": "shashi@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "sashi-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": "https://mobile.twitter.com/ShashiB09187374"
+                },
+                {
+                    "id": "sashi-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/sbp-4a06371a0/"
+                },
+                {
+                    "id": "sashi-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/shashi.b.prasad.10"
+                }
+            ],
+            "icon": "/images/about-page/team-members/sashi/profile-picture.jpg",
+            "designation": "Chief of Staff & Project Alignment"
+        },
+        {
+            "id": 104,
+            "name": "Dipro Mondal",
+            "email": {
+                "toshow": "dipro@brahm<span class='highlight'>ware</span>.com",
+                "address": "dipro@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "dipro-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": ""
+                },
+                {
+                    "id": "dipro-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/dipro-mondal-96a85298/"
+                },
+                {
+                    "id": "dipro-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/dipro.mondal"
+                }
+            ],
+            "icon": "/images/about-page/team-members/dipro/profile-picture.jpg",
+            "designation": "President Media"
+        },
+        {
+            "id": 105,
+            "name": "Saurav Siddhartha",
+            "email": {
+                "toshow": "saurav@brahm<span class='highlight'>ware</span>.com",
+                "address": "saurav@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "saurv-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": "https://twitter.com/ssiddhartha93"
+                },
+                {
+                    "id": "saurav-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/saurav-siddhartha/"
+                },
+                {
+                    "id": "saurav-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/saurav.siddhartha"
+                }
+            ],
+            "icon": "/images/about-page/team-members/saurav/profile-picture.jpg",
+            "designation": "Chief Sales & Strategy Officer"
+        },
+        {
+            "id": 106,
+            "name": "Bhaskar Sinha",
+            "email": {
+                "toshow": "bhaskar@brahm<span class='highlight'>ware</span>.com",
+                "address": "bhaskar@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "bhaskar-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/bsinha13"
+                }
+            ],
+            "icon": "/images/about-page/team-members/bhaskar/profile-picture.jpg",
+            "designation": "USA Representative"
+        }
+    ],
+    "about_us": {
+        "paragraph_1": "We are a proud India-born organization that revamps your business with emerging technologies. We are grounded in our values, business ethics and while we stick true to our roots we leave no stones unturned to assist the worldwide audience.",
+        "paragraph_2": "We employ an array of technologies to boost your company's reputation, efficiency, speed, and productivity. AI techniques are used to create better business decisions and keep your company ahead of the competition. We conduct extensive research to fully comprehend each company process and its specific requirements. Because your company will face numerous problems along the way, our services are not restricted to a few. We have everything covered for you, regardless of your business kind or demand. To accomplish projects quickly, we employs agile approaches. Our team has expertise in a variety of industries, which enables us to provide reliable products and services globally.",
+        "message": "We guarantee extraordinary business outcomes with us as strategic partners."
+    },
+    "ourprinciples": {
+        "title": "There are four principles that we stand for",
+        "principles_list": [
+            {
+                "name": "Integrity",
+                "icon": "/images/about-page/our-principles/Integrity.svg",
+                "content": "We have a set of morals, business ethics that we follow no matter what comes our way."
+            },
+            {
+                "name": "Trust",
+                "icon": "/images/about-page/our-principles/Trust.svg",
+                "content": "Our partner’s trust is the biggest asset for us and hence we will do everything that takes to maintain our relationship in the long term."
+            },
+            {
+                "name": "Transparency",
+                "icon": "/images/about-page/our-principles/Transparency.svg",
+                "content": "We are transparent in our prices, commitments, and strategies so there will not be anything that you will not know about us."
+            },
+            {
+                "name": "Excellence",
+                "icon": "/images/about-page/our-principles/Excellence.svg",
+                "content": "We strive hard to deliver every single work with utmost perfection in all our responsibilities."
+            }
+        ]
+    },
+    "missioin_vision": {
+        "mission": {
+            "content": "To inspire every aspiring business and motivate them to turn their business dreams into reality."
+        },
+        "vision": {
+            "content": "To resolve every business challenge across the world with the help of emerging technologies."
+        }
+    },
+    "conclusion": "Brahmware was started to motivate every business idea that keeps running in the minds of billions of people across the globe. We believe that anyone with a business idea is already an entrepreneur and all it takes to implement it is a little courage and proper guidance. We do not consider ourselves as just the service providers to our clients but we work as the companions who will stand strong in the highs and lows of your business."
+}

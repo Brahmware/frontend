@@ -1,0 +1,1 @@
+export { ReactComponent as PricingBannerBackgroundImage } from './pricing-banner.svg';

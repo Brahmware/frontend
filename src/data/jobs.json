@@ -1,0 +1,83 @@
+[{
+        "jobid": 1001,
+        "jobtitle": "Frontend Developer",
+        "jobtype": "Full-time",
+        "joblocation": "India (Remote)",
+        "jobdetails": {
+            "description": "Are you a talented and passionate front-end web developer/designer? - please keep reading We are looking for a highly skilled developer with 2+ years of coding experience in React.js to join our Tech team. The candidate is responsible for developing and designing front-end web architecture, ensuring the responsiveness of applications, and working alongside product designers and back-end developers for web design features and applications development, among other duties. You will have access to cutting-edge design tools and be responsible for designing and delivering successful websites for a wide range of niches and international clients. You must have an eye for small details and a passion for quality as well as experience working on web projects from concept through launch. We'll assess each candidate on merit, not by years of experience.",
+            "responsibilities": [
+                "Develop high-quality and responsive UI for our web/mobile applications.",
+                "Coordinate with backend team to establish JSON-based APIs.",
+                "Integrating third-party dependencies and debugging dependency conflicts.",
+                "Ensure coding standards & best practices are adhered to in all deliverables"
+            ],
+            "requirements": [
+                "Must have 2+ years of experience in developing responsive websites/mobile apps using React.js",
+                "Experienced with React Router and Redux state management.",
+                "Knowledge of JWT authentication.",
+                "Strong coding experience in HTML 5.0, Bootstrap 4.0, React, JavaScript, ES6, CSS3 and SCSS.",
+                "Experience in building complex features and interfaces for React applications.",
+                "Familiarity with RESTful APIs.",
+                "Experience with version control tools like Github.",
+                "Good spoken and written English."
+            ],
+            "benifits": [
+                "Paid sick time",
+                "Work from home"
+            ],
+            "education": [
+                "Bachelor's (Preferred)"
+            ],
+            "experience": [
+                "<span>React JS:</span> 2 years (Preferred)",
+                "<span>JavaScript:</span> 1 year (Preferred)",
+                "<span>HTML5:</span> 1 year (Preferred)"
+            ]
+        }
+    },
+    {
+        "jobid": 1002,
+        "jobtitle": "Content Writer",
+        "jobtype": "Internship",
+        "joblocation": "India (Remote)",
+        "jobdetails": {
+            "description": "Are you a Creative Writer, with excellent clutter free writing with zero grammatical error? We are looking for you!",
+            "responsibilities": [
+                "Responsible for writing clear marketing copy to promote our services.",
+                "Will be preparing well-structured drafts.",
+                "Contribute to content strategy generation and stay up-to-date with market affairs and happenings that can add value to the overall output of the content.",
+                "Promote content on social media and manage the social media presence of the organization.",
+                "Proofread or edit blog posts before publication.",
+                "Update website content as needed.",
+                "Create and post timely content on organizations' websites.",
+                "Enjoys working as a part of a team in a collaborative environment.",
+                "Research market and industries to create content that is innovative and original.",
+                "Create eye-catching and innovative headlines.",
+                "Working closely with the SEO team to produce quality website content.",
+                "Create content with the use of keywords and is focused on search engine optimization (SEO)",
+                "Understand that content has requirements in terms of tone, style, messaging in different mediums and have experience in writing such accordingly."
+            ],
+            "requirements": [
+                "Familiarity with the keyword placement and SEO.",
+                "Should have 6 months to 3 years of experience in copywriting/content writing.",
+                "Portfolio of published work.",
+                "Excellent grammar and writing skills.",
+                "Must have knowledge of keyword research.",
+                "Should have a good knowledge of readability score and on-page SEO.",
+                "Able to multitask, prioritize and manage time efficiently.",
+                "Proficient with Cloud Docs and Working."
+            ],
+            "benifits": [
+                "Paid sick time",
+                "Work from home"
+            ],
+            "education": [
+                "Bachelor's (Preferred)"
+            ],
+            "experience": [
+                "<span>Creative Writing:</span> 2 years (Preferred)",
+                "<span>SEO Content Marketing:</span> 1 year (Preferred)"
+            ]
+        }
+    }
+]

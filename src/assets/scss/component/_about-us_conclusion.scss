@@ -1,0 +1,27 @@
+.conclusion-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    & .conclusion-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .conclusion {
+            font-size: 1.5em;
+            line-height: 1.3em;
+            text-align: center;
+            max-width: 40em;
+
+            & span {
+                font-weight: 400;
+                color: $white;
+            }
+        }
+
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,13 @@
+.brahmnauts-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .brahmnauts-container {
+        background-color: rgba($white, $alpha: 0.05);
+        border-radius: $medium-border-radius;
+    }
+}

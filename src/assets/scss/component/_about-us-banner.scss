@@ -1,0 +1,144 @@
+.about-banner-section {
+    height: 100vh;
+    width: 100%;
+    padding-top: 10em;
+
+    &>.container {
+        height: calc(100vh - 10em);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    & .about-banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 10em);
+        width: inherit;
+
+        & .tagline {
+            font-size: 3em;
+            line-height: 1.2em;
+            font-weight: 700;
+            color: $white;
+            align-self: start;
+        }
+
+        & .banner-image {
+            height: 35em;
+            width: 35em;
+
+            & svg {
+                height: inherit;
+                width: inherit;
+            }
+        }
+    }
+
+    & .services-socials-component {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4em;
+        position: absolute;
+        transform: translateY(-4em);
+
+        & .our-services {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: max-content;
+
+            & .title {
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+
+            & .services {
+                font-size: 1.1em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+            }
+        }
+
+        & .our-socials {
+            width: max-content;
+
+            & .social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
+
+                & svg {
+                    height: 1em;
+                    fill: $white;
+                    transition: $transition-base;
+
+                    &:hover {
+                        fill: $primary
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
+    }
+
+    @media #{$tablet-device, $large-mobile, $small-mobile, $extra-small-mobile} {
+        padding-bottom: 4em;
+
+        & .container {
+            height: 100%;
+        }
+
+        & .about-banner {
+            flex-direction: column;
+            position: relative;
+
+            & .tagline {
+                height: max-content;
+            }
+
+            & .banner-image {
+                height: 100%;
+            }
+        }
+
+        & .services-socials-component {
+            position: relative;
+            transform: translateY(0);
+        }
+    }
+
+    @media #{$large-mobile} {
+        font-size: 0.8em;
+
+        & .tagline {
+            font-size: 2.3em !important;
+        }
+
+        & .services-socials-component {
+            & .social {
+                & svg {
+                    height: 1.5em !important;
+                }
+            }
+        }
+    }
+
+    @media #{$small-mobile, $extra-small-mobile} {
+        font-size: 0.6em;
+        padding-top: 12em;
+    }
+
+}

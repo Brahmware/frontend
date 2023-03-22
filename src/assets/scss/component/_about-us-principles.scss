@@ -1,0 +1,74 @@
+.our-principles-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    & .our-principles-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4em;
+
+        & .title {
+            font-weight: 600;
+            font-size: 2em;
+            color: $primary;
+        }
+
+        & .tagline {
+            font-size: 1.5em;
+            line-height: 1.2em;
+            font-weight: 500;
+            color: $white;
+            align-self: center;
+        }
+
+        & .principles {
+            padding: 0;
+            margin: 0;
+
+            & .principle {
+                background-color: $dull-black;
+                height: 25em;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: $default-shadow;
+
+                & .icon {
+                    height: 8em;
+
+                    & svg {
+                        height: inherit;
+                    }
+                }
+
+                & .name {
+                    height: 4em;
+                    font-size: 1.3em;
+                    font-weight: 500;
+                    color: $primary;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                & .content {
+                    height: 8em;
+                    text-align: center;
+                    font-size: 0.9em;
+                    line-height: 1.3em;
+                }
+
+            }
+        }
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
+    }
+
+}

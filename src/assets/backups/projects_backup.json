@@ -1,0 +1,90 @@
+[
+    {
+        "id": "brahmcast",
+        "media": {
+            "thumb": "/images/works/brahmcast/thumbnail.jpg",
+            "image": "/images/works/brahmcast/brahmcast-project-details.jpg"
+        },
+        "title": "Brahmcast",
+        "link": "",
+        "categories": [
+            "Media Studio",
+            "Media Production",
+            "Professional Network"
+        ],
+        "challenge": [
+            "Brand Apparel",
+            "Brand activation",
+            "Brand architecture",
+            "Brand characteristics",
+            "Interaction and experience design (UI/UX)",
+            "Web design",
+            "Web & App Development",
+            "Market and brand equity insights"
+        ],
+        "date": "Winter 2021 - Present",
+        "team": [
+            "Design Team",
+            "Development Team",
+            "Marketing Team",
+            "Digital Marketing Team",
+            "BI Analyst"
+        ],
+        "service": [
+            "Business Solutions",
+            "Branding & Advertising",
+            "Tech Solutions"
+        ],
+        "subTitle": "Details",
+        "body": [
+            "<p>This is a personal website of the founder of Brahmware, Sanchayan Bhunia. This service is not availble for public.</p>"
+        ],
+        "quote": "This is the testimonial or review from clients, then will <br> is lorem ispum dolor sit amet, consectetur adipiscing elit  sed do <br> eiusmod tempor incididunt ut labore.",
+        "name": "Sanchayan Bhunia",
+        "designation": "Founder of Brahmware",
+        "gallery": {
+            "imageOne": "/images/works/brahmcast/gallery/brahmcast-1.jpg",
+            "imageTwo": "/images/works/brahmcast/gallery/brahmcast-2.jpg",
+            "imageThree": "/images/works/brahmcast/gallery/brahmcast-3.jpg"
+        }
+    },
+    {
+        "id": "yolobus_transportation",
+        "media": {
+            "thumb": "/images/works/yolobus/thumbnail.jpg",
+            "image": "/images/works/yolobus/yolobus-project-details.jpg"
+        },
+        "title": "Yolobus Transportation",
+        "link": "https://yolobus.in/",
+        "categories": [
+            "Intercity Bus Travel Experience",
+            "Bus Ticket Booking Portal",
+            "Heavy Vehicles Operator Network"
+        ],
+        "challenge": [
+            "CG Advertising",
+            "Motion design (A/V)"
+        ],
+        "date": "Summer 2020",
+        "team": [
+            "Design Team",
+            "CGI Team",
+            "A/V Production Team"
+        ],
+        "service": [
+            "Branding & Advertising"
+        ],
+        "subTitle": "Details",
+        "body": [
+            "<p>This is a personal website of the founder of Brahmware, Sanchayan Bhunia. This service is not availble for public.</p>"
+        ],
+        "quote": "This is the testimonial or review from clients, then will <br> is lorem ispum dolor sit amet, consectetur adipiscing elit  sed do <br> eiusmod tempor incididunt ut labore.",
+        "name": "Sanchayan Bhunia",
+        "designation": "Founder of Brahmware",
+        "gallery": {
+            "imageOne": "/images/works/yolobus/gallery/yolobus-1.jpg",
+            "imageTwo": "/images/works/yolobus/gallery/yolobus-2.jpg",
+            "imageThree": "/images/works/yolobus/gallery/yolobus-3.jpg"
+        }
+    }
+]

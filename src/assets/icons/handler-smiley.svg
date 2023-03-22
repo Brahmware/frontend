@@ -1,0 +1,8 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 473.9 473.9" style="enable-background:new 0 0 473.9 473.9;" xml:space="preserve">
+  <circle id="face" class="face" cx="237" cy="237" r="237"/>
+  <circle id="mouth" class="mouth" cx="237" cy="335.7" r="25.8"/>
+  <circle id="left-eye" class="eye" cx="164.9" cy="155.2" r="37.2"/>
+  <circle id="right-eye" class="eye" cx="305.7" cy="155.2" r="37.2"/>
+  </svg>

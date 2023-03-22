@@ -1,0 +1,83 @@
+.privacy-section {
+    padding-top: 12em;
+    margin-bottom: 8em;
+    height: 100vh;
+    width: 100%;
+
+    & .container {
+        height: calc(100% - 2em);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        & .section-title {
+            padding-bottom: 2em;
+            flex-grow: 0;
+        }
+
+        & .privacy-information-wrapper {
+            background-color: $dull-black;
+            flex-grow: 1;
+            border-radius: 2em;
+            height: max-content;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            & .privacy-information {
+                height: 100%;
+                overflow-y: auto;
+                padding: 4em 6em;
+
+                & a {
+                    color: $primary;
+                }
+
+                & .policies {
+                    padding: 2em 0;
+
+                    & h3 {
+                        color: $white;
+                        position: sticky;
+                    }
+
+                    & .desc {
+                        padding-bottom: 1em;
+                    }
+
+                    & ul {
+                        list-style-type: circle;
+                        padding-left: 2em;
+                    }
+                }
+
+                // Managing Scroll Bar
+                &::-webkit-scrollbar {
+                    width: $scrollbar-width;
+                    /* width of the entire scrollbar */
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: $dull-black;
+                    /* color of the tracking area */
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: var(--bs-body-color);
+                    /* color of the scroll thumb */
+                    /* roundness of the scroll thumb */
+                    border: 0;
+                    /* creates padding around scroll thumb */
+                }
+            }
+        }
+    }
+
+    @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
+        & .privacy-information {
+            padding: 0em 1em !important;
+        }
+    }
+
+
+}

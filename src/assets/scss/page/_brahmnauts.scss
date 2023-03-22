@@ -1,0 +1,30 @@
+@media #{$tablet-device} {
+    .brahmnauts-container {
+        font-size: 0.9em;
+    }
+}
+
+@media #{$large-mobile} {
+    .brahmnauts-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.85em;
+
+        &>div {
+            gap: 3em
+        }
+
+        & .web-admin,
+        & .not-web-admin {
+            width: max-content;
+        }
+    }
+}
+
+@media #{$small-mobile, $extra-small-mobile} {
+    .brahmnauts-container {
+        font-size: 0.75em;
+    }
+}

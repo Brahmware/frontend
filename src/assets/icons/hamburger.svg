@@ -1,0 +1,10 @@
+<svg id="hamburgerIcon" data-name="b0cc017e-06ae-4da6-a507-9553d413583d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            line {fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;}
+        </style>
+    </defs>
+    <line id="top-bar" x1="4.0421" y1="9.0347" x2="45.9578" y2="9.0347" />
+    <line id="middle-bar" x1="4.0417" y1="25" x2="45.9574" y2="25" />
+    <line id="bottom-bar" x1="4.0421" y1="40.9653" x2="45.9578" y2="40.9653" />
+</svg>

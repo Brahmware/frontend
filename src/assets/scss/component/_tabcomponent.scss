@@ -1,0 +1,44 @@
+.tab-component {
+    background-color: $highest-transparent-dull-black;
+    /* @supports (backdrop-filter: none) {
+        backdrop-filter: blur(10px);
+    } */
+    width: fit-content;
+    border-radius: 20px;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    & .tab {
+        padding-right: 1em;
+        padding-left: 1em;
+        &:not(:last-child) {
+            border-right: $stroke-lite solid $loweest-transparent-black;
+        }
+    }
+    @media #{$large-mobile, $tablet-device, $tablet-landscape} {
+        margin-top: 5%;
+        & .tab {
+            & .text {
+                font-size: 0.8em !important;
+                font-weight: 500;
+            }
+        }
+        @media #{$tablet-device} {
+            & .tab {
+                & .text {
+                    font-size: 1.2em !important;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    @media #{$small-mobile, $extra-small-mobile} {
+        margin-top: 5%;
+        & .tab {
+            & .text {
+                font-size: 0.7em !important;
+                font-weight: 500;
+            }
+        }
+    }
+}

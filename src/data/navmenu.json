@@ -1,0 +1,53 @@
+{
+    "navData": [
+        {
+            "id": "home",
+            "icon": "/images/nav-menu/home.svg",
+            "title": "Home",
+            "link": "/",
+            "submenu": []
+        },
+        {
+            "id": "about-us",
+            "icon": "/images/nav-menu/aboutus.svg",
+            "title": "About <span>Us</span>",
+            "link": "/about",
+            "submenu": []
+        },
+        {
+            "id": "pricing",
+            "icon": "/images/nav-menu/pricing.svg",
+            "title": "Pricing",
+            "link": "/pricing",
+            "submenu": []
+        },
+        {
+            "id": "our-services",
+            "icon": "/images/nav-menu/services.svg",
+            "title": "Our <span>Services</span>",
+            "link": "/services",
+            "submenu": []
+        },
+        {
+            "id": "works",
+            "icon": "/images/nav-menu/works.svg",
+            "title": "Our <span>Works</span>",
+            "link": "/works",
+            "submenu": []
+        },
+        {
+            "id": "career",
+            "icon": "/images/nav-menu/career.svg",
+            "title": "Career",
+            "link": "/career",
+            "submenu": []
+        },
+        {
+            "id": "brahmnauts",
+            "icon": "/images/nav-menu/brahmnaut_icon.svg",
+            "title": "For Brahmnauts",
+            "link": "/brahmnauts",
+            "submenu": []
+        }
+    ]
+}

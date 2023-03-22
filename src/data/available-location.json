@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "country": "India",
+        "iso": "IND",
+        "icon": "/images/contact-page/india.svg",
+        "phonecode": "+91",
+        "phoneno": "8084229404",
+        "address": "<span>New Delhi</span>, India"
+    },
+    {
+        "id": 2,
+        "country": "Italy",
+        "iso": "ITA",
+        "icon": "/images/contact-page/italy.svg",
+        "phonecode": "+39",
+        "phoneno": "3483920505",
+        "address": "<span>Genova</span>, Italy"
+    },
+    {
+        "id": 3,
+        "country": "USA",
+        "iso": "USA",
+        "icon": "/images/contact-page/italy.svg",
+        "phonecode": "+39",
+        "phoneno": "3483920505",
+        "address": "<span>Genova</span>, Italy"
+    }
+]

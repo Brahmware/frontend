@@ -1,0 +1,209 @@
+/*--
+/*  4.3 - Why Choose & Counter CSS
+/*----------------------------------------*/
+
+// Why Choose
+.our-brahmand-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
+.our-brahmand-wrapper {
+    padding-top: 4em;
+
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+
+    & .row {
+        & .col {
+            & .service-box {
+                margin-left: -1px;
+
+                @media #{$small-mobile} {
+                    margin-left: 0;
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+
+    // Service Box 
+    & .service-box {
+        height: auto;
+        background-color: $dull-black;
+        transition: $transition-base;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+
+        @media #{$desktop-device} {
+            padding: 25px;
+            flex-basis: 100%;
+        }
+
+        @media #{$tablet-device} {
+            padding: 25px;
+            flex-basis: 60%;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $primary;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: $transition-base;
+        }
+
+        & .box-content {
+            & .title {
+                & a {
+                    font-family: $font-family-base;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $white;
+                    line-height: 1.5;
+                    transition: $transition-base;
+
+                    @media #{$desktop-device} {
+                        font-size: 16px;
+                    }
+
+                    @media #{$large-mobile} {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            & p {
+                margin-top: 15px;
+                transition: $transition-base;
+            }
+        }
+
+        &.active {
+            border-color: $primary;
+
+            &::before {
+                transform: scaleX(1);
+            }
+
+            & .box-part {
+                & i {
+                    & svg {
+                        & .icon-background {
+                            fill: $dull-black;
+                        }
+
+                        .hover {
+                            animation-play-state: running !important;
+                        }
+                    }
+                }
+
+                & .title {
+                    color: $black;
+                }
+
+                & .text {
+                    color: $dull-black;
+                    transition: $transition-base;
+                }
+            }
+        }
+    }
+
+    // service-box box-part
+    & .service-box {
+        border: none;
+
+        & .box-part {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 2em;
+
+            & i {
+                & svg {
+                    height: 20em;
+
+                    & .icon-background {
+                        transition: $transition-base;
+                    }
+                }
+
+                height: 20em;
+            }
+
+            & .title {
+                & h4 {
+                    margin: 0;
+                }
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                display: table-cell;
+                vertical-align: middle;
+                transition: $transition-base;
+
+                @media #{$desktop-device} {
+                    font-size: 16px;
+                }
+
+                @media #{$large-mobile} {
+                    font-size: 18px;
+                }
+
+                & :hover {
+                    color: $white;
+                }
+            }
+
+            & .text {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                color: $highest-transparent-white;
+                font-size: 1em;
+                line-height: 1.4em;
+                height: 150px;
+                transition: $transition-base;
+
+                & span {
+                    text-align: center;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &:hover {}
+    }
+
+    & .cta-our-brahmand {
+        margin-top: 4em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .text {
+            text-align: center;
+            line-height: 1.5em;
+        }
+    }
+}

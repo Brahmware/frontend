@@ -1,0 +1,126 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "link": "business_solutions",
+            "title": "Business Solutions",
+            "icon": "/images/our-brahmand/businessprocess.svg",
+            "backgroundImage": "/images/slider/software.mp4",
+            "excerpt": "Every business solution we provide has been designed as per the client’s requirements and after a lot of research in understanding how it can help each business in achieving its goals. Our solutions assure profitable business outcomes.",
+            "types": [
+                {
+                    "title": "Business <span>Analysis</span>",
+                    "description": "We identify your business needs and determine solutions to your business problems. This in turn enables change in an organizational context, by defining needs and recommending solutions that deliver value to you & your stakeholders."
+                },
+                {
+                    "title": "Requirement <span>Analysis</span>",
+                    "description": "We engineer processes to determine the needs and expectations of your new product. It involves analysing your organization and end-users of your products to define expectations, resolve conflicts, and document all the key requirements."
+                },
+                {
+                    "title": "Business Process <span>Modeling</span>",
+                    "description": "We model business processes, engineer every process involved in your enterprise, so that the current business processes may be analysed, improved, and automated."
+                },
+                {
+                    "title": "Customer <span>Management</span>",
+                    "description": "We utilize technology for managing all your organization’s relationships and interactions with your customers and potential customers. We help you improve business relationships. Our CRM system would help you stay connected to your customers, streamline processes, and improve profitability."
+                },
+                {
+                    "title": "Marketing & <span>Sales</span>",
+                    "description": "We help building awareness of your organization step by step. Then brand it to your potential customers. Ultimately, we turn that viewership into a profit, by converting those potential customers into actual ones."
+                },
+                {
+                    "title": "Strategy and <span>Consulting</span>",
+                    "description": "Your organization needs to remain competitive. By analysing your business practices and devising strategies for improvement we help define your addressable market, identify industry trends, and create strategies for improving your performance and revenue."
+                },
+                {
+                    "title": "e<span>Learning</span>",
+                    "description": "We provide resources & educational activities within your organization especially created to enhance the knowledge and skills of your employees while providing information and instruction on how to better perform specific tasks."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "link": "branding",
+            "title": "Branding",
+            "icon": "/images/our-brahmand/branding.svg",
+            "backgroundImage": "/images/slider/analytics.mp4",
+            "excerpt": "Effective branding helps to create a memorable impression and also helps to build trust with the audience. Our creative, skilled, strategic brand architects know how to exactly convert your target audience into loyal customers that in turn helps in improving recognition.",
+            "types": [
+                {
+                    "title": "Corporate <span>Design</span>",
+                    "description": "We establish a consistent corporate brand identity for your organization which ensures that everyone in the organization represents it the same way every time they interact with clients, stakeholders, and potential customers. It comprises the visual and linguistic staging of your organization and serves to make your identity and values visible."
+                },
+                {
+                    "title": "Corporate <span>Identity</span>",
+                    "description": "We help you present your organization to the outside world the best possible way. Everything is well planned and strategically implemented to make your organization distinctive and be better able to clearly differentiate itself from competitors."
+                },
+                {
+                    "title": "Digital <span>Strategy</span>",
+                    "description": "Our digital strategies give you more focus in your marketing efforts and would clearly outline the tactical steps to be taken in order to form new differentiating business capabilities."
+                },
+                {
+                    "title": "Brand <span>Strategy</span>",
+                    "description": "We strategize long-term plans for your organization to achieve a series of long-term goals that would ultimately result in awareness, identification and preference of your brand by customers."
+                },
+                {
+                    "title": "Communication <span>Strategy</span>",
+                    "description": "We formulate a guide which would help your organization to transform its products or services into a brand by meeting communication objectives to accomplish business objectives. This communication planning would be the foundation for successful and impactful communications and marketing activities."
+                },
+                {
+                    "title": "SEO & <span>SMO</span>",
+                    "description": "We extensively use social media networks to manage and grow your organization's message and online presence. We continuously focus on improving the rankings of your websites, so that it can drive different visitors through various Search Engines."
+                },
+                {
+                    "title": "Commercial <span>Design</span>",
+                    "description": "We create compelling advertising messages designed for delivery through a motion picture film or video medium to attract the attention of your consumers and influence consumers' feelings toward a particular product, service, event or cause."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "link": "tech_solutions",
+            "title": "Tech Solutions",
+            "icon": "/images/our-brahmand/websiteandapplication.svg",
+            "backgroundImage": "/images/slider/customer-service.mp4",
+            "excerpt": "By choosing Brhamware’s tech solutions you opt for a smart business as you will encounter increased productivity, reliability, and a world-class experience for your audience. Our domain experts will ensure that your brand makes a significant impact on every visitor.",
+            "types": [
+                {
+                    "title": "Front and Back-end <span>Development</span>",
+                    "description": "Websites are now a critical component for any business to stay competitive. And as web development trends and best practices change practically with the season, we develop websites capable of taking your breath away with its crisp loading, ultra-clean layout, well-constructed pages, and impressive visuals. Same for your Target audience."
+                },
+                {
+                    "title": "API <span>Development</span>",
+                    "description": "API enables your organization’s website to open up their applications' data and functionality to external third-party developers, business partners, and internal departments within your organization. So, as usual, we are masters of well-built API to boost your tech requirements."
+                },
+                {
+                    "title": "User Experience <span>Design</span>",
+                    "description": "We focus on having a deep understanding of users, what they need, what they value, their abilities, and also their limitations. We also consider your business goals and objectives. The overall experience of any user using any product in terms of how easy or pleasing it is to use."
+                },
+                {
+                    "title": "User Interface <span>Design</span>",
+                    "description": "We analyse deeply the point of human-Digital product interaction and communication. This as a result reflects off all your digital products when any user interacts with these."
+                },
+                {
+                    "title": "Responsive <span>Web Design<span>",
+                    "description": "Our web development approach always creates dynamic changes to the appearance of your organization’s website, depending on the screen size and orientation of the device being used to view it."
+                },
+                {
+                    "title": "App design & <span>Development</span>",
+                    "description": "Main reason that mobile app design is so important to your Organization’s success is that it has a dramatic effect on your app's user experience. The way your app looks and moves plays a critical role in the way a user feels when interfacing with it. This is critical for customer acquisition."
+                },
+                {
+                    "title": "Micro<span>sites</span>",
+                    "description": "You need single-function website that usually consists of just one page? They're used to attract conversions for a specific task or to bring awareness to a product or upcoming event. We deliver for such requirements with our expertise."
+                },
+                {
+                    "title": "Concept <span>Prototyping</span>",
+                    "description": "For your brand to release the right products, we go through extensive experimental processes where our design teams implement ideas into tangible forms. We build prototypes of varying degrees of fidelity to capture design concepts and test on users. After this exercise, you can refine and validate the viable products."
+                },
+                {
+                    "title": "Ecommerce & <span>Online Shops</span>",
+                    "description": "We apply our versatility to your Organizational requirements. If you deal with selling and buying of goods and services over the Internet, we’ll cover every aspect of your business to enable it as an online marketplace."
+                }
+            ]
+        }
+    ]
+}
