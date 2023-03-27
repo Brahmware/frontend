@@ -16,19 +16,17 @@ const Brahmnauts = () => {
     let backlink = query.get('backlink');
 
     return (
-        <React.Fragment>
-            <Layout>
-                <SEO title="Brahmnaut Station" />
-                <div className="main-wrapper brahmnauts-wrapper">
-                    <div className="container brahmnauts-container">
-                        <div className="flex-column d-flex justify-content-center align-items-center">
-                            <WebAdmin />
-                            <NotWebAdmin backlink={backlink} />
-                        </div>
+        <Layout>
+            <SEO title="Brahmnaut Station" />
+            <div className="main-wrapper brahmnauts-wrapper">
+                <div className="container brahmnauts-container">
+                    <div className="flex-column d-flex justify-content-center align-items-center">
+                        <WebAdmin />
+                        <NotWebAdmin backlink={backlink} />
                     </div>
                 </div>
-            </Layout>
-        </React.Fragment>
+            </div>
+        </Layout>
     )
 }
 
