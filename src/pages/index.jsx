@@ -2,8 +2,6 @@ import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 import BrandContainer from "../containers/global/brand";
-import TestimonialContainer from "../containers/global/testimonial";
-import WorkContainer from "../containers/global/work";
 import HomeAbout from "../containers/home/about";
 import PricingContainer from "../containers/home/home-pricing";
 import IconBoxContainer from "../containers/home/icon-box";
@@ -24,10 +22,8 @@ const HomePage = () => {
                     <BrandContainer />
                     <HomeAbout />
                     <OurBrahmandContainer />
-                    {/* <WorkContainer /> */}
-                    <IconBoxContainer />
                     <PricingContainer />
-                    {/* <TestimonialContainer /> */}
+                    <IconBoxContainer />
                     <Footer />
                 </div>
                 <ScrollToTop />

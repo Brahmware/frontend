@@ -20,8 +20,6 @@ const HomePage = lazy(() => import("./pages/index"));
 const AboutPage = lazy(() => import("./pages/about"));
 const PricingPage = lazy(() => import("./pages/pricing"));
 const ContactPage = lazy(() => import("./pages/contact"));
-const WorksPage = lazy(() => import("./pages/works.jsx"));
-const ProjectDetails = lazy(() => import("./templates/project-details"));
 const OurServices = lazy(() => import("./pages/services"));
 const careerPage = lazy(() => import("./pages/career"));
 const privacyPolicy = lazy(() => import("./pages/privacyPolicy"));
@@ -62,14 +60,6 @@ const App = () => {
                 path={`${process.env.PUBLIC_URL + "/pricing"}`}
                 component={PricingPage}
             />
-            {/* <Route
-                path={`${process.env.PUBLIC_URL + "/works"}`}
-                component={WorksPage}
-            /> */}
-            {/* <Route
-                path={`${process.env.PUBLIC_URL + "/project-detalis/:id"}`}
-                component={ProjectDetails}
-            /> */}
             <Route
                 path={`${process.env.PUBLIC_URL + "/brahmnauts"}`}
                 component={Brahmnauts}

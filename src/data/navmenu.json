@@ -29,13 +29,6 @@
             "submenu": []
         },
         {
-            "id": "works",
-            "icon": "/images/nav-menu/works.svg",
-            "title": "Our <span>Works</span>",
-            "link": "/works",
-            "submenu": []
-        },
-        {
             "id": "career",
             "icon": "/images/nav-menu/career.svg",
             "title": "Career",
