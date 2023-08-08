@@ -24,10 +24,10 @@ const HomePage = () => {
                     <BrandContainer />
                     <HomeAbout />
                     <OurBrahmandContainer />
-                    <WorkContainer />
+                    {/* <WorkContainer /> */}
                     <IconBoxContainer />
                     <PricingContainer />
-                    <TestimonialContainer />
+                    {/* <TestimonialContainer /> */}
                     <Footer />
                 </div>
                 <ScrollToTop />

@@ -62,14 +62,14 @@ const App = () => {
                 path={`${process.env.PUBLIC_URL + "/pricing"}`}
                 component={PricingPage}
             />
-            <Route
+            {/* <Route
                 path={`${process.env.PUBLIC_URL + "/works"}`}
                 component={WorksPage}
-            />
-            <Route
+            /> */}
+            {/* <Route
                 path={`${process.env.PUBLIC_URL + "/project-detalis/:id"}`}
                 component={ProjectDetails}
-            />
+            /> */}
             <Route
                 path={`${process.env.PUBLIC_URL + "/brahmnauts"}`}
                 component={Brahmnauts}

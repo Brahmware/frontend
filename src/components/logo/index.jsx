@@ -6,7 +6,9 @@ import { ReactComponent as SeedOfLife } from "./seed_of_life.svg";
 
 const Logo = ({ }) => {
     return (
-        <Link to={process.env.PUBLIC_URL + "/"}>
+        <Link
+            to={process.env.PUBLIC_URL + "/"}
+        >
             <div className="logo-elements">
                 <i className="seed-of-life">
                     <SeedOfLife />

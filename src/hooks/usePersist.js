@@ -8,6 +8,6 @@ const usePersist = () => {
     }, [persist]);
 
     return [persist, setPersist];
-}
+};
 
 export default usePersist;
