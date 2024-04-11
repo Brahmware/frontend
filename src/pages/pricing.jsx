@@ -12,7 +12,7 @@ const PricingPage = () => {
     return (
         <React.Fragment>
             <Layout>
-                <SEO title="Brahmware - Pricing" />
+                <SEO title="Brahmware Pricing" />
                 <div className="main-wrapper">
                     <Header />
                     <PricingBannerContainer />
